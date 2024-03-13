@@ -1,6 +1,6 @@
 ---
 layout: subpage
-title: eleventy example | home
+title: tools - pouch studio
 ---
 
 # Tools

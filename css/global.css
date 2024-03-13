@@ -11,6 +11,39 @@
   src: url(/fonts/Dongle-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  size-adjust: 90%;
+  src: url(/fonts/IBMPlexMono-Regular.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 400;
+  size-adjust: 90%;
+  src: url(/fonts/IBMPlexMono-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 700;
+  size-adjust: 90%;
+  src: url(/fonts/IBMPlexMono-Medium.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 700;
+  size-adjust: 90%;
+  src: url(/fonts/IBMPlexMono-MediumItalic.ttf) format('truetype');
+}
 
 html {
   background-color: white;
