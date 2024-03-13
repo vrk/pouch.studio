@@ -4,12 +4,57 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }}</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Pouch Studio: software (and non-software) that loves paper">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://pouch.studio/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="Pouch Studio: software (and non-software) that loves paper">
+    {# <meta property="og:image" content="https://pouch.cafe/images/og.png"> #}
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="pouch.studio">
+    <meta property="twitter:url" content="https://pouch.studio">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="Pouch Studio: software (and non-software) that loves paper">
+    {# <meta name="twitter:image" content="https://pouch.cafe/images/og.png"> #}
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    {# <link rel="icon" type="image/png" href="/images/wich.png"> #}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/global.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ stylesheet | safe }}" type="text/css" media="screen" />
+    <script src="{{ script | safe }}" defer></script>
   </head>
 
   <body>
+    <div id="container">
+      <div id="image-container">
+        <div id="studio-head">
+          <h1>Pouch Studio</h1>
+          <h2>software (&amp; non-software)<br>that loves paper</h2> 
+        </div>
+
+        <div id="pouch-stack">
+        </div>
+      </div>
+      <nav id="studio-nav">
+        <a href="">info</a><br><br>
+        <a href="">zines</a><br>
+        <a href="">machines</a><br>
+        <a href="">tools</a><br>
+        <a href="">essays?</a><br><br>
+        <a href="">shop</a>
+      </nav>
+    </div>
+
     {{ content | safe }}
   </body>
 </html>
