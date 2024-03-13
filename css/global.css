@@ -1,6 +1,14 @@
 :root {
-  --pouch-title-font-size: 120px;
+  --pouch-title-font-size: 80px;
   --pouch-nav-font-size: 30px;
+}
+
+@font-face {
+  font-family: 'Dongle';
+  font-style: normal;
+  font-weight: 400;
+  size-adjust: 150%;
+  src: url(/fonts/Dongle-Regular.ttf) format('truetype');
 }
 
 
@@ -10,8 +18,12 @@ html {
   font-family: "IBM Plex Mono", monospace;
   font-size: 20px;
   line-height: 1.6;
-  margin: 55px 45px;
   text-underline-position: under;
+  margin: 0;
+}
+
+body {
+  margin: 0;
 }
 
 a {
@@ -39,11 +51,9 @@ ul {
 }
 
 #container {
-  /* displayV: flex;
-  flex-direction: row;
-  justify-content: space-between; */
-  /* max-width: 1200px; */
-  margin: auto;
+  margin: 0;
+  padding: 55px 45px;
+  position: relative;
   background-color: white;
 }
 
@@ -77,6 +87,11 @@ ul {
   text-wrap: nowrap;
 }
 
+#studio-head h1 a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #studio-head h2 {
   margin: 0;
   font-weight: normal;
@@ -92,6 +107,7 @@ ul {
   font-size: var(--pouch-nav-font-size);
   text-align: right;
   right: 45px;
+  z-index: 100;
 }
 
 .pouch {
@@ -193,4 +209,23 @@ ul {
 
 #pouch-stack .pouch:nth-child(20) {
   bottom: 580px;
+}
+
+#container main h1 {
+  font-size: 50px;
+  /* text-align: center; */
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 75px;
+}
+
+#container main {
+  /* margin: auto; */
+  max-width: 800px;
+  /* border: 2px solid black; */
+}
+
+p {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }

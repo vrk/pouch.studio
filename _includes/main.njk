@@ -28,7 +28,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/global.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="{{ stylesheet | safe }}" type="text/css" media="screen" />
     <script src="{{ script | safe }}" defer></script>
@@ -36,45 +36,15 @@
 
   <body>
     <div id="container">
-      <div id="image-container">
-        <div id="studio-head">
-          <h1>Pouch Studio</h1>
-          <h2>software (&amp; non-software)<br>that loves paper</h2> 
-        </div>
-
-        <div id="pouch-stack">
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-          <div class="pouch"></div>
-        </div>
-      </div>
       <nav id="studio-nav">
         <a href="">info</a><br><br>
-        <a href="">zines</a><br>
-        <a href="">machines</a><br>
-        <a href="">tools</a><br>
-        <a href="">essays?</a><br><br>
+        <a href="/zines">zines</a><br>
+        <a href="/machines">machines</a><br>
+        <a href="/tools">tools</a><br>
+        <a href="/essays">essays?</a><br><br>
         <a href="">shop</a>
       </nav>
+      {{ content | safe }}
     </div>
-
-    {{ content | safe }}
   </body>
 </html>
