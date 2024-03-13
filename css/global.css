@@ -104,15 +104,19 @@ ul {
 }
 
 #airplane {
-  display: flex;
+  cursor: pointer;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 100px;
   position: absolute;
+  left: -20%;
   top: 200px;
-  animation-duration: 10s;
+  animation-duration: 100s;
   animation-name: flight;
+  animation-delay: 0.3s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
   transform: scaleX(1) rotate(-7deg);
 }
 
@@ -130,13 +134,13 @@ ul {
 
 @keyframes wiggle {
   from, to {
-    transform: rotate(-1deg);
+    transform: rotate(-2deg);
   }
   25%, 75% {
     transform: rotate(0);
   }
   50% {
-    transform: rotate(1deg);
+    transform: rotate(2deg);
   }
 }
 
@@ -153,116 +157,82 @@ ul {
 }
 
 @keyframes flight {
-  0%, 100% {
-    left: 0;
+  0% {
+    left: -20%;
     transform: scaleX(1) rotate(-7deg);
+    z-index: 1000;
   }
 
-  10% {
-    top: 180px;
+  12% {
+    top: 150px;
     left: 20%;
     transform: scaleX(1) rotate(-7deg);
   }
-  11% {
-    transform: scaleX(1) rotate(2deg);
+
+  13% {
+    transform: scaleX(1) rotate(7deg);
   }
 
-  20% {
-    top: 280px;
-    left: 40%;
-    transform: scaleX(1) rotate(2deg);
+  25% {
+    z-index: 0;
   }
 
-  21% {
-    top: 280px;
-    transform: scaleX(1) rotate(-7deg);
+  37% {
+    top: 300px;
+    left: 70%;
+    transform: scaleX(1) rotate(7deg);
   }
 
-  30% {
-    top: 200px;
-    left: 60%;
-    transform: scaleX(1) rotate(-7deg);
+  38% {
+    top: 300px;
+    left: 70%;
+    transform: scaleX(1) rotate(0);
   }
-
-  31% {
-    top: 200px;
-    transform: scaleX(1) rotate(6deg);
-  }
-
-  40% {
-    top: 250px;
-    left: 80%;
-    transform: scaleX(1) rotate(6deg);
-  }
-
-  41% {
-    top: 250px;
-    transform: scaleX(1) rotate(-15deg);
-  }
-
+  
   50% {
-    top: 200px;
-    left: 100%;
-    transform: scaleX(1) rotate(-15deg);
+    left: 90%;
+    transform: scaleX(1) rotate(0);
   }
-
   51% {
-    top: 200px;
-    left: 100%;
-    transform: scaleX(-1) rotate(6deg);
+    left: 90%;
+    transform: scaleX(-1) rotate(0);
   }
 
-  60% {
-    top: 250px;
-    left: 80%;
-    transform: scaleX(-1) rotate(6deg);
+
+  66% {
+    top: 300px;
+    left: 70%;
+    transform: scaleX(-1) rotate(0deg);
   }
 
-  61% {
-    top: 250px;
+  67%{
+    top: 300px;
+    left: 70%;
     transform: scaleX(-1) rotate(-7deg);
   }
 
-  70% {
-    top: 200px;
-    left: 60%;
-    transform: scaleX(-1) rotate(-7deg);
-  }
-
-  71% {
-    top: 200px;
-    transform: scaleX(-1) rotate(2deg);
-  }
-
-  80% {
-    top: 280px;
-    left: 40%;
-    transform: scaleX(-1) rotate(2deg);
-  }
-
-  81% {
-    top: 280px;
-    transform: scaleX(-1) rotate(-7deg);
-  }
-
-  90% {
-    top: 180px;
+  88% {
+    top: 150px;
     left: 20%;
     transform: scaleX(-1) rotate(-7deg);
   }
 
-  91% {
-    top: 200px;
-    transform: scaleX(-1) rotate(2deg);
+  89% {
+    top: 150px;
+    left: 20%;
+    transform: scaleX(-) rotate(7deg);
   }
+
 
   99% {
-    left: 0;
-    transform: scaleX(-1) rotate(2deg);
+    left: -20%;
+    transform: scaleX(-1) rotate(7deg);
   }
-
+  100% {
+    left: -20%;
+    transform: scaleX(1) rotate(-7deg);
+  }
 }
-
 
 #studio-head {
   line-height: 2;
