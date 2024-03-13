@@ -48,6 +48,7 @@ ul {
 }
 
 #image-container {
+  position: relative;
   background-image: url(/images/drawing.png);
   background-size: 1202px 970px;
   background-position: 200px 20px;
@@ -91,4 +92,105 @@ ul {
   font-size: var(--pouch-nav-font-size);
   text-align: right;
   right: 45px;
+}
+
+.pouch {
+  background-image: url(/images/pouch-stack.png);
+  background-size: cover;
+  width: 264px;
+  height: 375px;
+  background-repeat: no-repeat;
+  transform: rotate(-18deg);
+}
+
+#pouch-stack {
+  position: absolute;
+  bottom: -180px;
+  left: 70px;
+}
+
+#pouch-stack .pouch {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#pouch-stack .pouch:nth-child(2) {
+  bottom: 20px;
+}
+
+#pouch-stack .pouch:nth-child(3) {
+  bottom: 60px;
+  left: 2px;
+}
+
+#pouch-stack .pouch:nth-child(4) {
+  bottom: 90px;
+}
+
+#pouch-stack .pouch:nth-child(5) {
+  bottom: 120px;
+}
+
+#pouch-stack .pouch:nth-child(6) {
+  bottom: 150px;
+}
+
+#pouch-stack .pouch:nth-child(7) {
+  bottom: 180px;
+  left: -3px;
+}
+
+#pouch-stack .pouch:nth-child(8) {
+  bottom: 210px;
+}
+#pouch-stack .pouch:nth-child(9) {
+  bottom: 240px;
+}
+
+#pouch-stack .pouch:nth-child(10) {
+  bottom: 280px;
+}
+
+#pouch-stack .pouch:nth-child(11) {
+  bottom: 325px;
+}
+
+#pouch-stack .pouch:nth-child(12) {
+  bottom: 350px;
+}
+
+#pouch-stack .pouch:nth-child(13) {
+  bottom: 380px;
+}
+
+#pouch-stack .pouch:nth-child(14) {
+  bottom: 420px;
+  left: 2px;
+}
+
+#pouch-stack .pouch:nth-child(15) {
+  bottom: 450px;
+}
+
+#pouch-stack .pouch:nth-child(16) {
+  bottom: 480px;
+  left: -yy2px;
+}
+
+#pouch-stack .pouch:nth-child(17) {
+  bottom: 500px;
+}
+
+#pouch-stack .pouch:nth-child(18) {
+  bottom: 520px;
+}
+
+#pouch-stack .pouch:nth-child(19) {
+  bottom: 550px;
+  left: 2px;
+}
+
+#pouch-stack .pouch:nth-child(20) {
+  bottom: 580px;
 }
