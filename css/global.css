@@ -74,9 +74,10 @@ ul {
 
 #container {
   margin: 0;
-  padding: var(--topbottom-padding) var(--leftright-padding);
   position: relative;
   background-color: white;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 #image-container {
@@ -84,7 +85,6 @@ ul {
   width: 1402px;
   height: 1070px;
   max-width: 100%;
-  overflow: hidden;
 }
 
 #background-img {
@@ -109,6 +109,18 @@ ul {
   z-index: 20;
 }
 
+#monitor {
+  position: absolute;
+  aspect-ratio: 777 / 999;
+  width: 650px;
+  left: 950px;
+  top: 400px;
+  background-image: url(/images/monitor.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 30;
+}
 
 #newsletter-label {
   animation: wiggle2 3s linear infinite;
@@ -120,6 +132,7 @@ ul {
   line-height: 2;
   z-index: 100;
   position: relative;
+  padding: var(--topbottom-padding) var(--leftright-padding);
 }
 
 #studio-head h1 {
@@ -173,7 +186,7 @@ ul {
 #pouch-stack {
   position: absolute;
   bottom: -180px;
-  left: 70px;
+  left: calc(45px + var(--leftright-padding));
   z-index: 30;
 }
 
