@@ -308,11 +308,13 @@ p {
   bottom: 575px;
 }
 
-#me-beep {
+#me-beep,
+#me-exclaim {
   width: 225px;
 }
 
-#comp-boop {
+#comp-boop,
+#comp-exclaim {
   width: 190px;
 }
 
