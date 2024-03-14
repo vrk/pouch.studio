@@ -293,3 +293,25 @@ p {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
+#mebubble {
+  position: absolute;
+  z-index: 40;
+  left: 820px;
+  bottom: 620px;
+}
+
+#computerbubble {
+  position: absolute;
+  z-index: 40;
+  left: 1150px;
+  bottom: 575px;
+}
+
+#me-beep {
+  width: 225px;
+}
+
+#comp-boop {
+  width: 190px;
+}
