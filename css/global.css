@@ -315,3 +315,5 @@ p {
 #comp-boop {
   width: 190px;
 }
+
+[hidden] { display: none !important; }
