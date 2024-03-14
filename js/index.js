@@ -1,5 +1,5 @@
-let msSinceAnimation = 0;
-const MsTillAnimation = 4000;
+let msSinceAnimation = 1900; // hack to make first animation start earlier
+const MsTillAnimation = 3000;
 
 const beepboop = {
   type: "tuple",
@@ -12,10 +12,11 @@ const beepboop = {
 
 const error = {
   type: "triplet",
-  totalDuration: 3000,
+  totalDuration: 4800,
   meBubbleAppear: 500,
-  compBubbleAppear: 900,
-  meBubbleAppearAgain: 1400,
+  meBubbleDisappear: 1500,
+  compBubbleAppear: 2800,
+  meBubbleAppearAgain: 3200,
   meBeep: document.getElementById('me-beep'),
   compBoop: document.getElementById('comp-exclaim'),
   meBeepAgain: document.getElementById('me-exclaim'),
@@ -23,7 +24,7 @@ const error = {
 
 const animations = [
   beepboop,
-  error
+  error,
 ];
 
 let beepMsSinceStart = 0;
@@ -32,7 +33,6 @@ let animationInProgress = false;
 let animationIndex = 0;
 
 const runloop = async () => {
-
   if (!animationInProgress) {
     msSinceAnimation += 100;
     if (msSinceAnimation % MsTillAnimation === 0) {
@@ -49,19 +49,28 @@ const runloop = async () => {
     beepMsSinceStart = 0;
     msSinceAnimation = 0;
     animationInProgress = false;
-    currentAnimation.meBeep.hidden = true;
-    currentAnimation.compBoop.hidden = true;
-    if (currentAnimation.meBeepAgain) {
-      currentAnimation.meBeepAgain.hidden = true;
-    }
+    const mebubbles = document.querySelectorAll('#mebubble img');
+    mebubbles.forEach(e => e.hidden = true);
+    const compbubbles = document.querySelectorAll('#computerbubble img');
+    compbubbles.forEach(e => e.hidden = true);
     animationIndex = (animationIndex + 1) % animations.length;
     return;
   }
+
+  if (currentAnimation.type === 'tuple' || currentAnimation.type === 'triplet') {
+    handleTupleTriplet(currentAnimation);
+  }
+}
+
+const handleTupleTriplet = (currentAnimation) => {
   if (beepMsSinceStart === currentAnimation.meBubbleAppear) {
     currentAnimation.meBeep.hidden = false;
   }
   if (beepMsSinceStart === currentAnimation.compBubbleAppear) {
     currentAnimation.compBoop.hidden = false;
+  }
+  if (currentAnimation.meBubbleDisappear && currentAnimation.meBubbleDisappear === beepMsSinceStart) {
+    currentAnimation.meBeep.hidden = true;
   }
   if (currentAnimation.meBubbleAppearAgain && currentAnimation.meBubbleAppearAgain === beepMsSinceStart) {
     currentAnimation.meBeep.hidden = true;
