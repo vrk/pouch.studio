@@ -8,7 +8,6 @@ title: essays - pouch studio
 I used to write a bit more, but I’m honestly quite out of practice!
 So these aren't traditional essays; they're the bits of writing I've been doing these days in various corners of the internet.
 
-
 [Design studies, part 1](https://vrklovespaper.substack.com/p/how-are-those-design-studies-going-bc5)
 
 [Design studies, part 2](https://vrk.mmm.page/fall2023curriculum_revisited)

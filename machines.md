@@ -7,8 +7,8 @@ title: machines - pouch studio
 
 I enjoy building simple machines 
 
-[Dogs of Fate]()
+## [Dogs of Fate](https://vrklovespaper.substack.com/p/i-have-improved-at-design#%C2%A7dogs-of-fate)
 
-[Christine Botts]()
+## [Christine Botts](/machines/cbotts)
 
-[Hourly GitHub Dog]()
+## [Hourly GitHub Dog](https://twitter.com/heyvrk/status/1661741659955298304?s=20)
