@@ -111,11 +111,115 @@ const singSequence = [
   },
 ];
 
+const fireSequence = [
+  {
+    duration: 1000,
+    graphic: meElements.beep,
+    shouldHide: false
+  },
+  {
+    duration: 1500,
+    graphic: meElements.beep,
+    shouldHide: true
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 100,
+    graphic: meElements.oop,
+    shouldHide: false
+  },
+  {
+    duration: 300,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire1,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compElements.fire2,
+    shouldHide: false
+  },
+];
+
 const animations = [
-  singSequence,
+  fireSequence,
   errorSequence,
   lovePaperSequence,
   beepBoopSequence,
+  singSequence,
 ];
 
 let beepMsSinceStart = 0;
@@ -125,11 +229,9 @@ let animationIndex = 0;
 let currentFrame = 0;
 
 const runloop = async () => {
-  console.log(msSinceAnimation);
   if (!animationInProgress) {
     msSinceAnimation += 100;
     if (msSinceAnimation % MsTillAnimation === 0) {
-      console.log("true");
       animationInProgress = true;
     }
     return;
@@ -150,7 +252,6 @@ const runloop = async () => {
     beepMsSinceStart = 0;
   }
 
-  console.log('Hi', currentFrame, currentAnimation.length);
   if (currentFrame === currentAnimation.length) {
     currentFrame = 0;
     beepMsSinceStart = 0;

@@ -309,6 +309,7 @@ p {
   position: absolute;
   z-index: 40;
   bottom: 495px;
+  display: flex;
   left: calc(950px + var(--main-img-left-offset));
 }
 
@@ -318,6 +319,17 @@ p {
 
 #computerbubble img {
   width: 190px;
+}
+
+#computerbubble #comp-fire1 {
+  width: 290px;
+  position: relative;
+  right: 100px;
+}
+#computerbubble #comp-fire2 {
+  width: 330px;
+  position: relative;
+  right: 130px;
 }
 
 [hidden] { display: none !important; }
