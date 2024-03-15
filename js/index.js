@@ -184,11 +184,6 @@ const fireSequence = [
   },
   {
     duration: 400,
-    graphic: compElements.fire1,
-    shouldHide: false
-  },
-  {
-    duration: 400,
     graphic: compElements.fire2,
     shouldHide: false
   },
