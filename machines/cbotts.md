@@ -5,7 +5,7 @@ title: Christine Botts - pouch studio
 
 # Christine Botts
 
-My friend Christine couldn't make it to our friend Tami's 30th birthday, so Christine and I collaborated on a talking paper doll of Christine which we named Christine Botts. Christine provided the photos and audio; I put together the machine. Made in about ~2 hours.
+My friend Christine couldn't make it to our friend Tami's 30th birthday, so Christine and I collaborated on a talking paper doll of Christine which we named Christine Botts. Christine provided the photos and audio; I put together the doll and the machine. Made in about ~2 hours.
 
 Press the button and Christine says a phrase!
 
