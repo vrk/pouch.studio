@@ -52,22 +52,17 @@ const lovePaperSequence = [
 
 const errorSequence = [
   {
-    duration: 1000,
+    duration: 400,
     graphic: meElements.beep,
     shouldHide: false
   },
   {
-    duration: 1500,
-    graphic: meElements.beep,
-    shouldHide: true
-  },
-  {
-    duration: 500,
+    duration: 200,
     graphic: compElements.exclaim,
     shouldHide: false
   },
   {
-    duration: 1200,
+    duration: 1500,
     graphic: meElements.exclaim,
     shouldHide: false
   },
@@ -90,7 +85,7 @@ const singSequence = [
     shouldHide: false
   },
   {
-    duration: 800,
+    duration: 100,
     graphic: compElements.beep,
     shouldHide: true
   },
@@ -98,6 +93,11 @@ const singSequence = [
     duration: 400,
     graphic: compElements.boop,
     shouldHide: false
+  },
+  {
+    duration: 100,
+    graphic: compElements.beep,
+    shouldHide: true
   },
   {
     duration: 800,
@@ -148,7 +148,7 @@ const fireSequence = [
     shouldHide: false
   },
   {
-    duration: 400,
+    duration: 300,
     graphic: compElements.fire2,
     shouldHide: false
   },
@@ -158,7 +158,7 @@ const fireSequence = [
     shouldHide: false
   },
   {
-    duration: 300,
+    duration: 400,
     graphic: compElements.fire1,
     shouldHide: false
   },
@@ -215,11 +215,11 @@ const fireSequence = [
 ];
 
 const animations = [
-  fireSequence,
-  errorSequence,
-  lovePaperSequence,
   beepBoopSequence,
+  errorSequence,
   singSequence,
+  fireSequence,
+  lovePaperSequence,
 ];
 
 let beepMsSinceStart = 0;

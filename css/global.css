@@ -301,7 +301,7 @@ p {
 #mebubble {
   position: absolute;
   z-index: 40;
-  bottom: 620px;
+  bottom: 540px;
   left: calc(620px + var(--main-img-left-offset));
 }
 
