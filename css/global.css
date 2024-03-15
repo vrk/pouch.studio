@@ -130,7 +130,6 @@ ul {
   transform: rotate(1deg);
 }
 
-
 #studio-head {
   line-height: 2;
   z-index: 100;
@@ -147,7 +146,6 @@ ul {
 #studio-head h1 img {
   position: relative;
   left: 1px;
-  
 }
 
 #studio-head h1 a {
