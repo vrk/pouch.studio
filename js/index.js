@@ -1,13 +1,42 @@
-let msSinceAnimation = 1900; // hack to make first animation start earlier
+let msSinceAnimation = 2500; // hack to make first animation start earlier
 const MsTillAnimation = 3000;
+
+const compBeep = document.getElementById('comp-beep');
+const compBoop = document.getElementById('comp-boop');
+const compExclaim = document.getElementById('comp-exclaim');
+const compFire1 = document.getElementById('comp-fire1');
+const compFire2 = document.getElementById('comp-fire2');
+const compNote = document.getElementById('comp-note');
+const compMeToo = document.getElementById('comp-metoo');
+const meBeep = document.getElementById('me-beep');
+const meBoop = document.getElementById('me-boop');
+const meExclaim = document.getElementById('me-exclaim');
+const meLovePaper = document.getElementById('me-lovepaper');
+const meNote = document.getElementById('me-note');
+const meOop = document.getElementById('me-oop');
+
+const beepBoopSequence = [
+  {
+    duration: 400,
+    graphic: meBeep,
+    shouldHide: false
+  },
+  {
+    duration: 400,
+    graphic: compBoop,
+    shouldHide: false 
+  },
+  {
+    duration: 1100,
+    graphic: null
+  },
+];
 
 const beepboop = {
   type: "tuple",
   totalDuration: 2500,
   meBubbleAppear: 500,
   compBubbleAppear: 900,
-  meBeep: document.getElementById('me-beep'),
-  compBoop: document.getElementById('comp-boop')
 }
 
 const lovepaper = {
@@ -34,23 +63,28 @@ const error = {
 const ding = {
   type: "comp2-ding",
   totalDuration: 4800,
-  compBubbleAppear: 2800,
-  meBubbleAppearAgain: 3200,
+  compAppear1: 2800,
+  compAppear2: 3200,
   meBeep: document.getElementById('me-beep'),
   compBoop: document.getElementById('comp-exclaim'),
   meBeepAgain: document.getElementById('me-exclaim'),
 }
 
+// const animations = [
+//   beepboop,
+//   error,
+//   lovepaper,
+// ];
+
 const animations = [
-  beepboop,
-  error,
-  lovepaper,
+  beepBoopSequence,
 ];
 
 let beepMsSinceStart = 0;
 
 let animationInProgress = false;
 let animationIndex = 0;
+let currentFrame = 0;
 
 const runloop = async () => {
   if (!animationInProgress) {
@@ -65,8 +99,19 @@ const runloop = async () => {
 
   const currentAnimation = animations[animationIndex];
 
-  if (beepMsSinceStart === currentAnimation.totalDuration) {
+  const frame = currentAnimation[currentFrame];
+  if (beepMsSinceStart === frame.duration) {
+    if (frame.graphic) {
+      frame.graphic.hidden = frame.shouldHide;
+    }
+    currentFrame++;
     beepMsSinceStart = 0;
+  }
+
+  if (currentFrame === currentAnimation.length) {
+    currentFrame = 0;
+    beepMsSinceStart = 0;
+    animationIndex = (animationInProgress + 1) % animations.length;
     msSinceAnimation = 0;
     animationInProgress = false;
     const mebubbles = document.querySelectorAll('#mebubble img');
@@ -74,11 +119,6 @@ const runloop = async () => {
     const compbubbles = document.querySelectorAll('#computerbubble img');
     compbubbles.forEach(e => e.hidden = true);
     animationIndex = (animationIndex + 1) % animations.length;
-    return;
-  }
-
-  if (currentAnimation.type === 'tuple' || currentAnimation.type === 'triplet') {
-    handleTupleTriplet(currentAnimation);
   }
 }
 
