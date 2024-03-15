@@ -10,6 +10,15 @@ const beepboop = {
   compBoop: document.getElementById('comp-boop')
 }
 
+const lovepaper = {
+  type: "tuple",
+  totalDuration: 4500,
+  meBubbleAppear: 500,
+  compBubbleAppear: 1900,
+  meBeep: document.getElementById('me-lovepaper'),
+  compBoop: document.getElementById('comp-metoo')
+}
+
 const error = {
   type: "triplet",
   totalDuration: 4800,
@@ -22,9 +31,20 @@ const error = {
   meBeepAgain: document.getElementById('me-exclaim'),
 }
 
+const ding = {
+  type: "comp2-ding",
+  totalDuration: 4800,
+  compBubbleAppear: 2800,
+  meBubbleAppearAgain: 3200,
+  meBeep: document.getElementById('me-beep'),
+  compBoop: document.getElementById('comp-exclaim'),
+  meBeepAgain: document.getElementById('me-exclaim'),
+}
+
 const animations = [
   beepboop,
   error,
+  lovepaper,
 ];
 
 let beepMsSinceStart = 0;
