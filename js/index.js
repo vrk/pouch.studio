@@ -1,13 +1,6 @@
 let msSinceAnimation = 2900; // hack to make first animation start earlier
 const MsTillAnimation = 3000;
 
-const meBeep = document.getElementById('me-beep');
-const meBoop = document.getElementById('me-boop');
-const meExclaim = document.getElementById('me-exclaim');
-const meLovePaper = document.getElementById('me-lovepaper');
-const meNote = document.getElementById('me-note');
-const meOop = document.getElementById('me-oop');
-
 const compElements = {
   beep: document.getElementById('comp-beep'),
   boop: document.getElementById('comp-boop'),
@@ -69,7 +62,7 @@ const errorSequence = [
     shouldHide: true
   },
   {
-    duration: 100,
+    duration: 500,
     graphic: compElements.exclaim,
     shouldHide: false
   },
@@ -80,35 +73,46 @@ const errorSequence = [
   },
 ];
 
-const error = {
-  type: "triplet",
-  totalDuration: 4800,
-  meBubbleAppear: 500,
-  meBubbleDisappear: 1500,
-  compBubbleAppear: 2800,
-  meBubbleAppearAgain: 3200,
-  meBeep: document.getElementById('me-beep'),
-  compBoop: document.getElementById('comp-exclaim'),
-  meBeepAgain: document.getElementById('me-exclaim'),
-}
-
-const ding = {
-  type: "comp2-ding",
-  totalDuration: 4800,
-  compAppear1: 2800,
-  compAppear2: 3200,
-  meBeep: document.getElementById('me-beep'),
-  compBoop: document.getElementById('comp-exclaim'),
-  meBeepAgain: document.getElementById('me-exclaim'),
-}
-
-// const animations = [
-//   beepboop,
-//   error,
-//   lovepaper,
-// ];
+const singSequence = [
+  {
+    duration: 400,
+    graphic: compElements.beep,
+    shouldHide: false
+  },
+  {
+    duration: 100,
+    graphic: compElements.beep,
+    shouldHide: true
+  },
+  {
+    duration: 400,
+    graphic: compElements.beep,
+    shouldHide: false
+  },
+  {
+    duration: 800,
+    graphic: compElements.beep,
+    shouldHide: true
+  },
+  {
+    duration: 400,
+    graphic: compElements.boop,
+    shouldHide: false
+  },
+  {
+    duration: 800,
+    graphic: meElements.note,
+    shouldHide: false
+  },
+  {
+    duration: 1200,
+    graphic: compElements.note,
+    shouldHide: false
+  },
+];
 
 const animations = [
+  singSequence,
   errorSequence,
   lovePaperSequence,
   beepBoopSequence,
