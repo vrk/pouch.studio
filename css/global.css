@@ -173,11 +173,21 @@ ul {
   z-index: 120;
 }
 
-#studio-nav a {
+#social-nav {
+  position: fixed;
+  bottom: calc(0.5 * var(--topbottom-padding));
+  font-size: 16px;
+  text-align: right;
+  right: var(--leftright-padding);
+  z-index: 120;
+}
+
+nav a, nav span {
   background-color: white;
 }
 
 .card {
+  cursor: pointer;
   position: absolute;
   width: 264px;
   height: 375px;
