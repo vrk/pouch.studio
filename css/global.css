@@ -165,12 +165,12 @@ ul {
 }
 
 #studio-nav {
-  position: absolute;
+  position: fixed;
   top: calc(var(--topbottom-padding));
   font-size: var(--pouch-nav-font-size);
   text-align: right;
   right: var(--leftright-padding);
-  z-index: 100;
+  z-index: 120;
 }
 
 #studio-nav a {
@@ -290,6 +290,7 @@ ul {
   /* margin: auto; */
   max-width: 800px;
   /* border: 2px solid black; */
+  padding: var(--topbottom-padding) var(--leftright-padding);
 }
 
 p {
