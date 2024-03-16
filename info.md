@@ -65,7 +65,7 @@ I love making machines whose only point is to make you (or me) (or us) smile.
 
 ### 📖 Writing for readers
 
-I love writing that is easy and fun to read. When you receive my newsletter, I want you to be excited to open it. I want you to read it quickly without effort. It shouldn't feel like eating vegetables!
+I love writing that is easy and fun to read. When you receive my newsletter, I want you to feel excited to open it. I want you to read it quickly without effort. It shouldn't feel like eating vegetables!
 
 ️Similarly, with _Pouch_, I strive to make a magazine where it's common for someone to read every single word in the issue. It should be a joy to read, the way you look forward to the next episode of a beloved TV show. This shouldn't be so unusual!
 
