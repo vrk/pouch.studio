@@ -29,6 +29,19 @@ Pouch Studio is the home of my independent creative lab. I make zines, I make so
 
 <div class="spacey">
 
+Sometimes I look like
+
+<img src="/images/meprofile-2.JPG" width="300"> or <img src="/images/meglasses.JPG" width="300">
+
+But frequently I actually look like this:
+
+<img src="/images/mesometimes.png" width="300">
+
+</div>
+
+---
+<div class="spacey">
+
 Here are some areas that are top of mind for me these days:
 
 ### 🔨 Paper as tool
