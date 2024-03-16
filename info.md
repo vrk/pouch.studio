@@ -21,7 +21,7 @@ stylesheet: /css/info.css
 
 Hello!! I'm Victoria, aka vrk! I live in Brooklyn, NY and I am a software engineer who loves paper. _(For my engineering resume, see [LinkedIn](https://www.linkedin.com/in/victoriakirst/).)_
 
-Pouch Studio is the home of my independent creative lab. I make zines, I make software, I make machines, I make tools, I make crafts, I write. Pouch Studio is where I publish this work!
+Pouch Studio is my independent creative lab. I make zines, I make software, I make machines, I make tools, I make crafts, I write. Pouch Studio is my home for this work!
 
 </div>
 
