@@ -330,10 +330,9 @@ nav a, nav span {
 }
 
 #container main {
-  /* margin: auto; */
-  max-width: 1000px;
+  max-width: 1200px;
   /* border: 2px solid black; */
-  padding-left: var(--leftright-padding);
+  margin-left: var(--leftright-padding);
   padding-right: 200px;
 }
 
@@ -448,6 +447,9 @@ footer {
 
 
 @media (max-width:1000px) {
+  body {
+    font-size: 16px;
+  }
   #studio-head, #studio-nav {
     position: relative;
     padding: 0;
@@ -490,5 +492,36 @@ footer {
 
   #pouch-stack {
     left: 0;
+  }
+
+  #container main {
+    margin: 0 20px;
+    padding-right: 0;
+  }
+   
+  #container main h1 {
+    font-size: 35px;
+  }
+
+  .spacey {
+    margin: 25px 0;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .display-table {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+
+  .display-desc {
+    margin-bottom: 50px;
+  }
+
+  .display-table .display-cover {
+    align-items: flex-start;
+    min-height: unset;
   }
 }
