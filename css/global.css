@@ -11,6 +11,7 @@
 
   --main-img-top-offset: 100px;
   --main-img-left-offset: 180px;
+  --main-font: 'IBM Plex Mono', monospace;
 }
 
 @font-face {
@@ -46,7 +47,7 @@
 html {
   background-color: white;
   color: black;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--main-font);
   font-size: 20px;
   line-height: 1.6;
   text-underline-position: under;
@@ -451,5 +452,19 @@ footer {
   width: calc(0.47 * var(--pouch-cover-width));
 }
 
+.display-table button {
+  cursor: pointer;
+  background-color: #91ffc1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: black;
+  border: 2px solid black;
+  font-family: var(--main-font);
+}
+
+.display-table button:hover {
+  background-color: #c3ffdd;
+}
 
 [hidden] { display: none !important; }
