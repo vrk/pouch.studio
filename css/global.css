@@ -85,7 +85,9 @@ ul {
 }
 
 #image-container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: calc(1202px + var(--main-img-left-offset));
   height: calc(970px + var(--main-img-top-offset));
   max-width: 100%;
@@ -134,7 +136,7 @@ ul {
 #studio-head {
   line-height: 2;
   z-index: 100;
-  position: absolute;
+  position: relative;
   padding: var(--topbottom-padding) var(--leftright-padding);
   padding-bottom: 0;
 }
@@ -176,6 +178,7 @@ ul {
   z-index: 120;
   display: flex;
   flex-direction: column;
+  gap: 3px;
   align-items: flex-end;
 }
 
