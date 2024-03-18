@@ -18,7 +18,15 @@
 
   --monitor-left-offset: 63%;
   --monitor-top-offset: 39%;
-  --monitor-width: 55%;
+  --monitor-width: 54.5%;
+
+  --mebubble-left-offset: 52%;
+  --mebubble-bottom-offset: 57%;
+  --mebubble-width: 18.7%;
+
+  --compbubble-left-offset: 80%;
+  --compbubble-bottom-offset: 52%;
+  --compbubble-width: 16%;
 }
 
 @font-face {
@@ -95,9 +103,9 @@ ul {
   position: absolute;
   top: var(--main-img-top-offset);
   left: var(--main-img-left-offset);
-  width: var(--main-image-width);
   height: var(--main-image-height);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--main-image-width);
 }
 
 #background-img {
@@ -126,7 +134,7 @@ ul {
 #monitor {
   position: absolute;
   aspect-ratio: 777 / 999;
-  width: 54.5%;
+  width: var(--monitor-width);
   left: var(--monitor-left-offset);
   top: var(--monitor-top-offset);
   background-image: url(/images/monitor.png);
@@ -397,18 +405,18 @@ nav a, nav span {
 #mebubble {
   position: absolute;
   z-index: 40;
-  bottom: 57%;
-  left: 52%;
-  width: 18.7%;
+  bottom: var(--mebubble-bottom-offset);
+  left: var(--mebubble-left-offset);
+  width: var(--mebubble-width);
 }
 
 #computerbubble {
   position: absolute;
   z-index: 40;
-  bottom: 52%;
+  bottom: var(--compbubble-bottom-offset);
   display: flex;
-  left: 80%;
-  width: 16%;
+  left: var(--compbubble-left-offset);
+  width: var(--compbubble-width);
 }
 
 #mebubble img {
@@ -502,7 +510,6 @@ footer {
 }
 
 [hidden] { display: none !important; } 
-
 
 
 @media (max-width:1000px) {
