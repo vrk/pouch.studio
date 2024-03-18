@@ -512,5 +512,10 @@ footer {
   background-color: #c3ffdd;
 }
 
+.note {
+  font-size: 80%;
+  font-style: italic;
+}
+
 [hidden] { display: none !important; } 
 

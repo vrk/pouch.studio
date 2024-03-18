@@ -31,7 +31,7 @@ I love making zines that play with the expectation of what a zine is supposed to
     <p>
       <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile"><button>Preorder Pouch</button></a>
     </p>
-    <p><em>NOTE: I'm treating Issue 1 as a pilot issue of the magazine! There WILL be a Pouch Issue 2, but I want to get feedback before commiting to a publishing cadence. If you want to see Pouch continue, please <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">buy the first issue</a> and provide feedback after reading!</em> ✨</p>
+    <p class="note">NOTE: I'm treating Issue 1 as a pilot issue of the magazine! There WILL be a Pouch Issue 2, but I want to get feedback before commiting to a publishing cadence. If you want to see Pouch continue, please <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">buy the first issue</a> and provide feedback after reading! ✨</p>
 </p>
   </div>
 
