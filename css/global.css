@@ -466,6 +466,10 @@ footer {
     position: unset;
   }
 
+  #social-nav {
+    display: none;
+  }
+
   #studio-nav {
     flex-direction: row;
     flex-wrap: wrap;
