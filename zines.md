@@ -5,7 +5,7 @@ title: zines - pouch studio
 
 # Zines
 
-I love making zines that play with the expectation of what a zine is supposed to be. For instance: a half-paper, half-digital interactive story; a sticker book; a full-color magazine produced by one person. But I also sometimes just draw the Shark Tank intro.
+I love making zines that play with the expectation of what a zine is supposed to be. For instance: a half-paper, half-digital interactive story; a sticker book; a full-color magazine. But I also sometimes just draw the Shark Tank intro.
 
 <div class="display-table">
 
