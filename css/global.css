@@ -251,10 +251,15 @@ nav a, nav span {
   position: absolute;
   width: 100%;
   backface-visibility: hidden;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 264 / 375;
+  background-repeat: no-repeat;
 }
 
 .back {
   transform: rotateY( 180deg );
+  background-color: #f9f8ef;
 }
 
 #top-pouch {
@@ -278,12 +283,23 @@ nav a, nav span {
 }
 
 .under-pouch-cover {
-  /* background-image: url(/images/pouch-stack.png); */
+  background-image: url(/images/zines/pouch-first-page.png);
   background-color: white;
   background-size: cover;
   aspect-ratio: 264 / 375;
   width: 100%;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  text-align: center;
+  padding: 10%;
+}
+
+.under-pouch-cover p {
+  margin: 0;
 }
 
 .pouch-pouch {

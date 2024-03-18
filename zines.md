@@ -1,7 +1,6 @@
 ---
 layout: subpage
 title: zines - pouch studio
-stylesheet: /css/zines.css
 ---
 
 # Zines
@@ -10,7 +9,7 @@ I love making zines that play with the expectation of what a zine is supposed to
 
 <div class="display-table">
 
-  <div class="display-cover">
+  <div class="display-cover" id="pouch">
     <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank"><img src="/images/zines/cover.png" id="display-pouch-cover" class="shadowed"/></a>
   </div>
   <div class="display-desc">
