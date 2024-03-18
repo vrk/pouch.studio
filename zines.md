@@ -20,16 +20,16 @@ stylesheet: /css/zines.css
       <li>An exclusive interview with <a href="https://www.instagram.com/nikki.kaigi/">@nikki.kaigi</a>
       <li>Pouch Picks: Stationery products to buy and try
       <li>Review of MakeID M1 Label Maker for labels & journaling
-      <li>Stationery problem-solving: What to do if your hand hurts when hand-writing
+      <li>What to do if your hand hurts when hand-writing
       <li>Ideas on how to use up empty notebooks
       <li>A DIY on how to make your own Kuchipatchi coaster
       <li>And more!!
     </ul>
-    <p>Pouch will have a booth at <a href="https://stationeryfestival.com/" target="_blank">Stationery Fest</a>, August 2024.</p>
-    <p><em>NOTE: I'm treating Issue 1 as a pilot issue of the magazine! There WILL be a Pouch Issue 2, but I want to get feedback before commiting to a publishing cadence. If you want to see Pouch continue, please <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">buy the first issue</a> and provide feedback after reading!</em> ✨</p>
+    <p>Pouch will be at <a href="https://stationeryfestival.com/" target="_blank">Stationery Fest</a>, August 2024.</p>
     <p>
       <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile"><button>Preorder Pouch</button></a>
     </p>
+    <p><em>NOTE: I'm treating Issue 1 as a pilot issue of the magazine! There WILL be a Pouch Issue 2, but I want to get feedback before commiting to a publishing cadence. If you want to see Pouch continue, please <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">buy the first issue</a> and provide feedback after reading!</em> ✨</p>
 </p>
   </div>
 

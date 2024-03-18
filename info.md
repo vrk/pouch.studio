@@ -42,7 +42,7 @@ But at home I usually look like
 ---
 <div class="spacey">
 
-Here are some areas that are top of mind for me these days:
+Here are my areas of interest these days:
 
 ### 🔨 Paper as tool
 
@@ -59,7 +59,7 @@ For instance:
 - If I print out a recipe on paper, I can still grab it when my hands are covered in flour. Is the same true for a recipe on my phone or laptop?
 - On Pinterest, Instagram, and TikTok, I can save unlimited pins, posts, videos and hoard infinite inspiration. Is this always helpful? Contrast this with a physical corkboard that only has so much space. What if I pinned my inspiration there?
 
-I think paper is often overlooked as a flexible and powerful surface, especially in the tech field, and I'm interested in how paper can complement our increasingly digital lives.
+I think paper is often overlooked as a flexible and powerful surface, especially in the tech field, and I'm interested in how paper can complement our increasingly complex digital lives.
 
 ### 🧸 Software & hardware as toy
 
