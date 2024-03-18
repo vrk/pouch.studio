@@ -29,11 +29,11 @@ Pouch Studio is my independent creative lab. I make zines, I make software, I ma
 
 <div class="spacey">
 
-Sometimes I look like
+When I leave the house, sometimes I look like
 
 <img src="/images/meprofile-2.JPG" width="300"> or <img src="/images/meglasses.JPG" width="300">
 
-But frequently I look like
+But at home I usually look like
 
 <img src="/images/mesometimes.png" width="300">
 
@@ -46,17 +46,20 @@ Here are some areas that are top of mind for me these days:
 
 ### 🔨 Paper as tool
 
-I am an engineer at heart, and I am fascinated by paper as a medium. Of course, I also love software and all the conveniences it brings - but I do not think software is always a more convenient and effective medium than paper.
+I am fascinated by paper as a medium! I am a software engineer, and I love software and all the conveniences it brings, but I do not think software is always a more convenient and effective form than paper.
 
-Software excels at providing infinity: infinite choices, infinite chances, infinite undos and redos and undos again. But infinity has its downsides: infinite distractions, infinite content, paralysis and isolation in a sea of noise.
+Software excels at providing infinity: infinite choices, infinite chances, infinite undos and redos and undos again. But infinity has its downsides: infinite content, infinite distractions, paralysis and isolation in a sea of noise.
 
-Paper, on the other hand, is decidedly finite. It is tangible. It remembers your pencil strokes, even after erasing. It wrinkles, it ages. I don't think of these qualities as "limitations"; rather, they are part of what enables paper to solve different problems than software can.
+Paper is decidedly finite. It is tangible, it wrinkles, it ages. It remembers your pencil strokes, even after erasing. I think of these as "qualities" of paper rather than "limitations"; they are part of what enables paper to solve different problems than software can.
 
-- I can only fit so many to-dos on a sticky note. Because of this, I have to keep my to-do list relatively short. Is this always a bad thing?
+For instance:
+
+- I can only fit so many to-dos on a sticky note. Is this always a bad thing?
+- When I draw or write by hand, I can only erase and start over so many times before the paper starts to deteriorate. Is this always a bad thing?
 - If I print out a recipe on paper, I can still grab it when my hands are covered in flour. Is the same true for a recipe on my phone or laptop?
-- When I draw or write by hand, I can only erase and start over so many times before the paper starts to deteriorate. Because of this, I am nudged to just keep going with what I have and move on to the next page. Is this a limitation?
-- On Pinterest, Instagram, and TikTok, I can save unlimited pins, posts, videos and hoard infinite inspiration. Is this always a benefit? On the other hand, if I print out a picture that inspires me, I have to see it and interact with it, and if I get tired of it I have to throw it out. Is that a bad thing?
+- On Pinterest, Instagram, and TikTok, I can save unlimited pins, posts, videos and hoard infinite inspiration. Is this always helpful? Contrast this with a physical corkboard that only has so much space. What if I pinned my inspiration there?
 
+I think paper is often overlooked as a flexible and powerful surface, especially in the tech field, and I'm interested in how paper can complement our increasingly digital lives.
 
 ### 🧸 Software & hardware as toy
 
