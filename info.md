@@ -76,9 +76,9 @@ I love writing that is easy and fun to read. When you receive my newsletter, I w
 
 I love things that are clearly made by a person, whether it's software, an email, a drawing, a note. Woven within these handmade things are layers of personality and expression that cannot be imitated any other way. They provide a connection between creator and receiver that can be surprisingly profound.
 
-Because of that, I'm pretty <em>un</em>interested in most* applications of generative AI. (And I'm outright against the use of generative AI that has been trained using the work of artists without their consent.) I think a lot of generative AI is like those TikTok face filters, but for your words, drawings, and thoughts. I don't think using a TikTok filter is bad per se, but your face through a filter is also not your face.
+Because of that, I'm pretty <em>un</em>interested in most* applications of generative AI. (And I'm against the use of generative AI that has been trained using the work of artists without their consent.) I think a lot of generative AI is like those TikTok face filters, but for your words, drawings, and thoughts. I don't think using a TikTok filter is bad per se, but your face through a filter is also not your face.
 
-I want to make it easier for people to make handmade and heartfelt things - not by auto-generation via buttons and prompts (those are not your face), but by the same thoughtful instruction, tooling, and community that has helped me grow my own artistic practice. 
+I want to make it easier for people to make handmade and heartfelt things - not by auto-generation, but by the same thoughtful tools, knoweldge, instruction, inspiration and community that has helped me grow my own artistic practice. 
 
 _*I'm not saying all AI is bad/uninteresting, generative or otherwise._
 
