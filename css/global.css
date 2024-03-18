@@ -9,16 +9,16 @@
   --nav-width: 200px;
   --airplane-buffer: calc(var(--airplane-width) + var(--nav-width));
 
-  --main-img-top-offset: 100px;
-  --main-img-left-offset: 180px;
   --main-font: 'IBM Plex Mono', monospace;
 
-  --main-image-width: 1202px;
-  --main-image-height: 970px;
+  --main-image-width: 1150px;
+  --main-image-height: calc(0.854 * var(--main-image-width));
+  --main-img-top-offset: 100px;
+  --main-img-left-offset: 200px;
 
-  --monitor-left-offset: calc(var(--main-image-width) * 0.623);
-  --monitor-top-offset: calc(var(--main-image-width) * 0.316);
-  --monitor-width: calc(var(--main-image-width) * 0.541)
+  --monitor-left-offset: 63%;
+  --monitor-top-offset: 39%;
+  --monitor-width: 55%;
 }
 
 @font-face {
@@ -106,7 +106,7 @@ ul {
   width: 100%;
   /* background-image: url(/images/background.png); */
   background-size: var(--main-image-width) var(--main-image-height);
-  background-position: 0 0;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 2;
 }
@@ -115,9 +115,10 @@ ul {
   position: absolute;
   height: 100%;
   width: 100%;
+  max-width: 100%;
   background-image: url(/images/foreground.png);
-  background-size: var(--main-image-width) var(--main-image-height);
-  background-position: 0 0;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 20;
 }
@@ -125,7 +126,7 @@ ul {
 #monitor {
   position: absolute;
   aspect-ratio: 777 / 999;
-  width: 650px;
+  width: 54.5%;
   left: var(--monitor-left-offset);
   top: var(--monitor-top-offset);
   background-image: url(/images/monitor.png);
@@ -396,35 +397,39 @@ nav a, nav span {
 #mebubble {
   position: absolute;
   z-index: 40;
-  bottom: 540px;
-  left: 620px;
+  bottom: 57%;
+  left: 52%;
+  width: 18.7%;
 }
 
 #computerbubble {
   position: absolute;
   z-index: 40;
-  bottom: 495px;
+  bottom: 52%;
   display: flex;
-  left: 950px;
+  left: 80%;
+  width: 16%;
 }
 
 #mebubble img {
-  width: 225px;
+  width: 100%;
 }
 
 #computerbubble img {
-  width: 190px;
+  /* width: 190px; */
+  width: 100%;
 }
 
 #computerbubble #comp-fire1 {
-  width: 290px;
+  width: 170%;
   position: relative;
-  right: 100px;
+  right: 50%;
 }
 #computerbubble #comp-fire2 {
-  width: 330px;
+  width: 195%;
   position: relative;
-  right: 130px;
+  right: 63%;
+  /* top: 100px; */
 }
 
 .display-table {
