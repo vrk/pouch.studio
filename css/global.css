@@ -27,6 +27,8 @@
   --compbubble-left-offset: 80%;
   --compbubble-bottom-offset: 52%;
   --compbubble-width: 16%;
+
+  --pouch-stack-width: 22%;
 }
 
 @font-face {
@@ -222,8 +224,6 @@ nav a, nav span {
 .card {
   cursor: pointer;
   position: absolute;
-  width: 264px;
-  height: 375px;
   transform: rotate(-18deg);
 }
 
@@ -246,7 +246,6 @@ nav a, nav span {
 .front,
 .back {
   position: absolute;
-  height: 100%;
   width: 100%;
   backface-visibility: hidden;
 }
@@ -256,16 +255,17 @@ nav a, nav span {
 }
 
 #top-pouch {
-  float: left;
   perspective: 1500px;
+  width: 100%;
+  aspect-ratio: 264 / 375;
 }
 
 .pouch,
 .pouch-cover {
   background-image: url(/images/cover.png);
   background-size: cover;
-  width: 264px;
-  height: 375px;
+  width: 100%;
+  aspect-ratio: 264 / 375;
   background-repeat: no-repeat;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -278,8 +278,8 @@ nav a, nav span {
   /* background-image: url(/images/pouch-stack.png); */
   background-color: white;
   background-size: cover;
-  width: 264px;
-  height: 375px;
+  aspect-ratio: 264 / 375;
+  width: 100%;
   background-repeat: no-repeat;
 }
 
@@ -288,9 +288,11 @@ nav a, nav span {
 }
 
 #pouch-stack {
+  height: 100%;
+  width: var(--pouch-stack-width);
   position: absolute;
-  bottom: -400px;
-  left: -75px;
+  bottom: -40%;
+  left: -7.65%;
   z-index: 30;
 }
 
@@ -377,7 +379,7 @@ nav a, nav span {
 }
 
 #pouch-stack #top-pouch {
-  bottom:600px;
+  bottom: 60%;
 }
 
 #container main h1 {
