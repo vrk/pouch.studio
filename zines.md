@@ -6,6 +6,8 @@ stylesheet: /css/zines.css
 
 # Zines
 
+I love making zines that play with the expectation of what a zine is supposed to be. For instance: a half-paper, half-digital interactive story; a sticker book; a full-color magazine produced by one person. But I also sometimes just draw the Shark Tank intro.
+
 <div class="display-table">
 
   <div class="display-cover">
@@ -13,7 +15,7 @@ stylesheet: /css/zines.css
   </div>
   <div class="display-desc">
     <h2><a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">Pouch</a></h2>
-    <p>Pouch is a new fanzine for stationery lovers! Issue 1 is launching in April 2024. It includes over 50 pages of content and features work from 9 creatives across 5 countries. A5 size (5.83" x 8.27") staple-bound booklet.</p>
+    <p>Pouch is a new fanzine for stationery lovers! Issue 1 is launching in April 2024. It includes over 50 pages of full-color content and features work from 9 creatives across 5 countries. A5 size (5.83" x 8.27") staple-bound booklet.</p>
     <p>In issue 1:</p>
     <ul>
       <li>A gallery of journal layouts from the community
