@@ -13,8 +13,8 @@
 
   --main-image-width: 1150px;
   --main-image-height: calc(0.854 * var(--main-image-width));
-  --main-img-top-offset: 100px;
-  --main-img-left-offset: 200px;
+  --main-img-top-offset: 30%;
+  --main-img-left-offset: 11%;
 
   --monitor-left-offset: 63%;
   --monitor-top-offset: 39%;
@@ -104,8 +104,8 @@ ul {
   top: var(--main-img-top-offset);
   left: var(--main-img-left-offset);
   height: var(--main-image-height);
-  width: 100%;
-  max-width: var(--main-image-width);
+  width: var(--main-image-width);
+  max-width: 80%;
 }
 
 #background-img {
