@@ -12,6 +12,13 @@
   --main-img-top-offset: 100px;
   --main-img-left-offset: 180px;
   --main-font: 'IBM Plex Mono', monospace;
+
+  --main-image-width: 1202px;
+  --main-image-height: 970px;
+
+  --monitor-left-offset: calc(var(--main-image-width) * 0.623);
+  --monitor-top-offset: calc(var(--main-image-width) * 0.316);
+  --monitor-width: calc(var(--main-image-width) * 0.541)
 }
 
 @font-face {
@@ -86,10 +93,10 @@ ul {
 
 #image-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(1202px + var(--main-img-left-offset));
-  height: calc(970px + var(--main-img-top-offset));
+  top: var(--main-img-top-offset);
+  left: var(--main-img-left-offset);
+  width: var(--main-image-width);
+  height: var(--main-image-height);
   max-width: 100%;
 }
 
@@ -98,8 +105,8 @@ ul {
   height: 100%;
   width: 100%;
   /* background-image: url(/images/background.png); */
-  background-size: 1202px 970px;
-  background-position: var(--main-img-left-offset) var(--main-img-top-offset);
+  background-size: var(--main-image-width) var(--main-image-height);
+  background-position: 0 0;
   background-repeat: no-repeat;
   z-index: 2;
 }
@@ -109,8 +116,8 @@ ul {
   height: 100%;
   width: 100%;
   background-image: url(/images/foreground.png);
-  background-size: 1202px 970px;
-  background-position: var(--main-img-left-offset) var(--main-img-top-offset);
+  background-size: var(--main-image-width) var(--main-image-height);
+  background-position: 0 0;
   background-repeat: no-repeat;
   z-index: 20;
 }
@@ -119,8 +126,8 @@ ul {
   position: absolute;
   aspect-ratio: 777 / 999;
   width: 650px;
-  left: calc(750px + var(--main-img-left-offset));
-  top: calc(380px + var(--main-img-top-offset));
+  left: var(--monitor-left-offset);
+  top: var(--monitor-top-offset);
   background-image: url(/images/monitor.png);
   background-size: cover;
   background-position: center;
@@ -147,7 +154,7 @@ ul {
 }
 
 #studio-head h1 img {
-  position:;
+  position: relative;
   left: 1px;
   max-width: 100%;
   width: 400px;
@@ -198,34 +205,6 @@ ul {
   right: var(--leftright-padding);
   z-index: 120;
 }
-
-@media (max-width:1000px) {
-  #studio-head, #studio-nav {
-    position: relative;
-    padding: 0;
-    margin: 20px;
-  }
-
-  #studio-head h2 {
-    font-size: 20px;
-  }
-
-  #studio-nav, #social-nav {
-    position: unset;
-  }
-
-  #studio-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    font-size: 20px;
-  }
-
-  #studio-nav .space-beneath, #studio-nav .space-above {
-    margin: unset;
-  }
-}
-
 
 nav a, nav span {
   background-color: white;
@@ -301,8 +280,8 @@ nav a, nav span {
 
 #pouch-stack {
   position: absolute;
-  bottom: calc(-300px - var(--main-img-top-offset));
-  left: calc(45px + var(--leftright-padding));
+  bottom: -400px;
+  left: -75px;
   z-index: 30;
 }
 
@@ -418,7 +397,7 @@ nav a, nav span {
   position: absolute;
   z-index: 40;
   bottom: 540px;
-  left: calc(620px + var(--main-img-left-offset));
+  left: 620px;
 }
 
 #computerbubble {
@@ -426,7 +405,7 @@ nav a, nav span {
   z-index: 40;
   bottom: 495px;
   display: flex;
-  left: calc(950px + var(--main-img-left-offset));
+  left: 950px;
 }
 
 #mebubble img {
@@ -519,3 +498,36 @@ footer {
 
 [hidden] { display: none !important; } 
 
+
+
+@media (max-width:1000px) {
+  #studio-head, #studio-nav {
+    position: relative;
+    padding: 0;
+    margin: 20px;
+  }
+
+  #studio-head h2 {
+    font-size: 20px;
+  }
+
+  #studio-nav, #social-nav {
+    position: unset;
+  }
+
+  #studio-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    font-size: 20px;
+  }
+
+  #studio-nav .space-beneath, #studio-nav .space-above {
+    margin: unset;
+  }
+
+  #image-container {
+    position: relative;
+    max-width: 100%;
+  }
+}
