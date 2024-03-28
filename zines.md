@@ -10,7 +10,7 @@ I love making zines that play with the expectation of what a zine is supposed to
 <div class="display-table">
 
   <div class="display-cover" id="pouch">
-    <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank"><img src="/images/zines/cover.png" id="display-pouch-cover" class="shadowed"/></a>
+    <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank"><img src="/images/zines/cover2.png" id="display-pouch-cover" class="shadowed"/></a>
   </div>
   <div class="display-desc">
     <h2><a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">Pouch</a></h2>
