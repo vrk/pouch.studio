@@ -10,10 +10,10 @@ I love making zines that play with the expectation of what a zine is supposed to
 <div class="display-table">
 
   <div class="display-cover" id="pouch">
-    <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank"><img src="/images/cover2.png" id="display-pouch-cover" class="shadowed"/></a>
+    <a href="http://pouchmagazine.com/" target="_blank"><img src="/images/cover2.png" id="display-pouch-cover" class="shadowed"/></a>
   </div>
   <div class="display-desc">
-    <h2><a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">Pouch</a></h2>
+    <h2><a href="http://pouchmagazine.com/" target="_blank">Pouch</a></h2>
     <p>Pouch is a new fanzine for stationery lovers! Issue 1 is launching in April 2024. It includes over 50 pages of full-color content and features work from 9 creatives across 5 countries. A5 size (5.83" x 8.27") staple-bound booklet.</p>
     <p>In issue 1:</p>
     <ul>
@@ -28,9 +28,9 @@ I love making zines that play with the expectation of what a zine is supposed to
     </ul>
     <p>Pouch will be at <a href="https://stationeryfestival.com/" target="_blank">Stationery Fest</a>, August 2024.</p>
     <p>
-      <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile"><button>Preorder Pouch</button></a>
+      <a href="https://payhip.com/b/DFxGZ"><button>Preorder Pouch</button></a>
     </p>
-    <p class="note">NOTE: I'm treating Issue 1 as a pilot issue of the magazine! There WILL be a Pouch Issue 2, but I want to get feedback before commiting to a publishing cadence. If you want to see Pouch continue, please <a href="https://pouchcafe.gumroad.com/l/pouch-01?layout=profile" target="_blank">buy the first issue</a> and provide feedback after reading! ✨</p>
+    <p class="note">NOTE: I'm treating Issue 1 as a pilot issue of the magazine! There WILL be a Pouch Issue 2, but I want to get feedback before commiting to a publishing cadence. If you want to see Pouch continue, please <a href="https://payhip.com/b/DFxGZ" target="_blank">buy the first issue</a> and provide feedback after reading! ✨</p>
 </p>
   </div>
 

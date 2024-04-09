@@ -271,5 +271,5 @@ function isMeElement(element) {
 const timer = setInterval(runloop, 100);
 const topPouch = document.getElementById('top-pouch');
 topPouch.addEventListener('click', (event) => {
-  window.location = '/zines#pouch';
+  window.location = 'https://pouchmagazine.com/';
 });
