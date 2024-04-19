@@ -1,0 +1,38 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Pouch Studio: software (and non-software) that loves paper">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://pouch.studio/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="Pouch Studio: software (and non-software) that loves paper">
+    <meta property="og:image" content="https://pouch.studio/images/og.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="pouch.studio">
+    <meta property="twitter:url" content="https://pouch.studio">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="Pouch Studio: software (and non-software) that loves paper">
+    <meta name="twitter:image" content="https://pouch.studio/images/og.png">
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    {# <link rel="icon" type="image/png" href="/images/wich.png"> #}
+
+    <link rel="stylesheet" href="/css/global.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ stylesheet | safe }}" type="text/css" media="screen" />
+    <link rel="shortcut icon" type="image/png" href="/images/comp-note.png"/>
+    <script src="{{ script | safe }}" defer></script>
+  </head>
+
+  <body>
+    {{ content | safe }}
+  </body>
+</html>
