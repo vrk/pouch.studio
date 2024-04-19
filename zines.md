@@ -26,7 +26,7 @@ I love making zines that play with the expectation of what a zine is supposed to
       <li>A DIY on how to make your own Kuchipatchi coaster
       <li>And more!!
     </ul>
-    <p>Pouch will be at <a href="https://stationeryfestival.com/" target="_blank">Stationery Fest</a>, August 2024.</p>
+    <p>Pouch will be at <a href="https://www.binderymke.com/milwaukeezinefest" target="_blank">Milwaukee Zine Fest</a> and <a href="https://stationeryfestival.com/" target="_blank">Stationery Fest</a> in 2024.</p>
     <p>
       <a href="https://shop.pouchmagazine.com/b/DFxGZ" target="_blank"><button>Preorder Pouch</button></a>
     </p>
