@@ -14,8 +14,8 @@ stylesheet: /css/links.css
 <div class="list">
   <a href="https://shop.pouchmagazine.com/b/DFxGZ" target="_blank">PREORDER Pouch Issue #1</a>
   <a href="https://shop.pouchmagazine.com/" target="_blank">Shop all zines</a>
-  <a href="https://pouch.studio/" target="_blank">Pouch Studio - Software that loves paper</a>
-  <a href="http://pouchmagazine.com/" target="_blank">Pouch Magazine - Indie Mag for Stationery Lovers</a>
+  <a href="http://pouchmagazine.com/" target="_blank">Pouch: Indie Magazine for Stationery Lovers</a>
+  <a href="https://pouch.studio/" target="_blank">Pouch Studio: Making zines, machines, & software that loves paper</a>
 </div>
 
 <div class="social-icons">
