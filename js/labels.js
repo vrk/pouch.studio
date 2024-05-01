@@ -55,8 +55,7 @@ async function processGumroadFile(url) {
 
   const americanAddresses = [];
 
-  // Loop through each line (skip the first if it contains headers)
-  for (let i = 1; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {
       if (lines[i].trim()) {  // Check if the line is not just whitespace
           const columns = lines[i].split(',');
           // const country = columns[columns.length - 1];
@@ -91,7 +90,7 @@ const Y_SPACING = inchToPixels(0.5);
 const LINE_SPACING = inchToPixels(0.1);
 function drawAddresses(canvas, ctx, addresses) {
   ctx.fillStyle = 'black';
-  ctx.font = "60px IBMPlexMono";
+  ctx.font = "40px IBMPlexMono";
   let yCursor = Y_START_MARGIN;
   let xCursor = X_START_MARGIN;
   for (const address of addresses) {
