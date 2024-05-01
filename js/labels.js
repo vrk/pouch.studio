@@ -26,8 +26,8 @@ const context = canvas.getContext('2d');
 const image = new Image();
 image.addEventListener("load", async (e) => {
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
-  console.log('drawn');
-  await processGumroadFile("/tools/gumroad-customers.csv");
+  const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
+  console.log(gumroadAddresses);
 });
 image.src = "/images/silhouette-bg.png";
 
@@ -43,13 +43,13 @@ async function processGumroadFile(url) {
   // Split the text into lines
   const lines = data.split('\n');
 
+  const americanAddresses = [];
+
   // Loop through each line (skip the first if it contains headers)
   for (let i = 1; i < lines.length; i++) {
       if (lines[i].trim()) {  // Check if the line is not just whitespace
           const columns = lines[i].split(',');
-          // Process each column here
-          console.log(columns);  // For example, log the columns to the console
-          const country = columns[columns.length - 1];
+          // const country = columns[columns.length - 1];
           const state = columns[columns.length - 2];
           const zip = columns[columns.length - 3];
           const city = columns[columns.length - 4];
@@ -62,11 +62,12 @@ async function processGumroadFile(url) {
             address += columns[1 + i];
           }
 
-          console.log(`
-            ${name}
-            ${address}
-            ${city}, ${state} ${zip}
-          `)
+          americanAddresses.push({
+            name,
+            address,
+            lastLine: `${city}, ${state} ${zip}`
+          })
       }
   }
+  return americanAddresses;
 }
