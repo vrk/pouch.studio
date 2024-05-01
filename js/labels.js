@@ -24,10 +24,49 @@ const context = canvas.getContext('2d');
 // context.fillRect(0, 0, canvas.width, canvas.height);
 
 const image = new Image();
-image.addEventListener("load", (e) => {
+image.addEventListener("load", async (e) => {
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
   console.log('drawn');
+  await processGumroadFile("/tools/gumroad-customers.csv");
 });
 image.src = "/images/silhouette-bg.png";
 
+async function processGumroadFile(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+  }
 
+  // Convert it to text
+  const data = await response.text();
+
+  // Split the text into lines
+  const lines = data.split('\n');
+
+  // Loop through each line (skip the first if it contains headers)
+  for (let i = 1; i < lines.length; i++) {
+      if (lines[i].trim()) {  // Check if the line is not just whitespace
+          const columns = lines[i].split(',');
+          // Process each column here
+          console.log(columns);  // For example, log the columns to the console
+          const country = columns[columns.length - 1];
+          const state = columns[columns.length - 2];
+          const zip = columns[columns.length - 3];
+          const city = columns[columns.length - 4];
+          const name = columns[0];
+
+          // Ugly way to build up the address with unknown # of commas
+          const addressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
+          let address = "";
+          for (let i = 0; i < addressTokens; i++) {
+            address += columns[1 + i];
+          }
+
+          console.log(`
+            ${name}
+            ${address}
+            ${city}, ${state} ${zip}
+          `)
+      }
+  }
+}
