@@ -20,6 +20,14 @@ function setDPI(canvas, dpi) {
 const canvas = document.getElementById('page');
 setDPI(canvas, 300);
 const context = canvas.getContext('2d');
-context.fillStyle = 'red';
-context.fillRect(0, 0, canvas.width, canvas.height);
+// context.fillStyle = 'red';
+// context.fillRect(0, 0, canvas.width, canvas.height);
+
+const image = new Image();
+image.addEventListener("load", (e) => {
+  context.drawImage(image, 0, 0, canvas.width, canvas.height);
+  console.log('drawn');
+});
+image.src = "/images/silhouette-bg.png";
+
 
