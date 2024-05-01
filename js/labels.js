@@ -1,6 +1,8 @@
 const CANVAS_WIDTH_INCHES = 8.5;
 const CANVAS_HEIGHT_INCHES = 11;
 const CSS_PIXELS_PER_INCH = 96;
+const DPI = 300;
+const PIXELS_PER_INCH = DPI;
 
 function setDPI(canvas, dpi) {
   // Set up CSS size.
@@ -18,16 +20,24 @@ function setDPI(canvas, dpi) {
 }
 
 const canvas = document.getElementById('page');
-setDPI(canvas, 300);
-const context = canvas.getContext('2d');
-// context.fillStyle = 'red';
-// context.fillRect(0, 0, canvas.width, canvas.height);
+setDPI(canvas, DPI);
+const ctx = canvas.getContext('2d');
 
 const image = new Image();
 image.addEventListener("load", async (e) => {
-  context.drawImage(image, 0, 0, canvas.width, canvas.height);
+  const font = new FontFace("IBMPlexMono", "url(/fonts/IBMPlexMono-regular.ttf)", {
+    style: "normal",
+    weight: "400"
+  });
+  // wait for font to be loaded
+  await font.load();
+  // add font to document
+  document.fonts.add(font);
+
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
   const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
   console.log(gumroadAddresses);
+  drawAddresses(canvas, ctx, gumroadAddresses)
 });
 image.src = "/images/silhouette-bg.png";
 
@@ -64,10 +74,67 @@ async function processGumroadFile(url) {
 
           americanAddresses.push({
             name,
-            address,
+            street: address,
             lastLine: `${city}, ${state} ${zip}`
           })
       }
   }
   return americanAddresses;
+}
+
+const Y_START_MARGIN = inchToPixels(1.5);
+const X_START_MARGIN = inchToPixels(0.75);
+const X_LIMIT = inchToPixels(7.75);
+const Y_LIMIT = inchToPixels(9.5);
+const X_SPACING = inchToPixels(0.25);
+const Y_SPACING = inchToPixels(0.5);
+const LINE_SPACING = inchToPixels(0.1);
+function drawAddresses(canvas, ctx, addresses) {
+  ctx.fillStyle = 'black';
+  ctx.font = "60px IBMPlexMono";
+  let yCursor = Y_START_MARGIN;
+  let xCursor = X_START_MARGIN;
+  for (const address of addresses) {
+    const { name, street, lastLine } = address;
+
+    const nameSize = ctx.measureText(name);
+    const streetSize = ctx.measureText(street);
+    const lastLineSize = ctx.measureText(lastLine);
+
+    const nameHeight = getHeightFromTextMetrics(nameSize);
+    const streetHeight = getHeightFromTextMetrics(streetSize);
+    const lastLineHeight = getHeightFromTextMetrics(lastLineSize);
+
+    const longestLineWidth = Math.max(nameSize.width, streetSize.width, lastLineSize.width);
+    const addressHeight = nameHeight + streetHeight + lastLineHeight + LINE_SPACING * 2;
+
+    if ((xCursor + longestLineWidth) > X_LIMIT) {
+      xCursor = X_START_MARGIN;
+      yCursor += addressHeight + Y_SPACING;
+      if ((yCursor + addressHeight) > Y_LIMIT) {
+        console.log(yCursor, addressHeight, Y_LIMIT)
+        break;
+      }
+    }
+
+    let innerYCursor = yCursor;
+    ctx.fillText(name, xCursor, innerYCursor);
+    innerYCursor += nameHeight + LINE_SPACING;
+
+    ctx.fillText(street, xCursor, innerYCursor);
+    innerYCursor += streetHeight+ LINE_SPACING;
+    
+    ctx.fillText(lastLine, xCursor, innerYCursor);
+    innerYCursor += lastLineHeight;
+
+    xCursor += longestLineWidth + X_SPACING;
+  }
+}
+
+function inchToPixels(inch) {
+  return inch * PIXELS_PER_INCH;
+}
+
+function getHeightFromTextMetrics(textMetrics) {
+  return textMetrics.actualBoundingBoxDescent + textMetrics.actualBoundingBoxAscent;
 }
