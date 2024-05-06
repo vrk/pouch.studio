@@ -36,7 +36,6 @@ image.addEventListener("load", async (e) => {
 
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
   const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
-  console.log(gumroadAddresses);
   drawAddresses(canvas, ctx, gumroadAddresses)
 });
 image.src = "/images/silhouette-bg.png";
@@ -81,17 +80,18 @@ async function processGumroadFile(url) {
   return americanAddresses;
 }
 
-const Y_START_MARGIN = inchToPixels(1.5);
-const X_START_MARGIN = inchToPixels(0.75);
+const PADDING = inchToPixels(0.2);
+const Y_START_MARGIN = inchToPixels(1.5) + PADDING;
+const X_START_MARGIN = inchToPixels(0.75) + PADDING;
 const X_LIMIT = inchToPixels(7.75);
 const Y_LIMIT = inchToPixels(9.5);
-const X_SPACING = inchToPixels(0.25);
-const Y_SPACING = inchToPixels(0.5);
-const LINE_SPACING = inchToPixels(0.1);
-const PADDING = inchToPixels(0.1);
+const X_SPACING = inchToPixels(0.1);
+const Y_SPACING = inchToPixels(0.1);
+const LINE_SPACING = inchToPixels(0.05);
+let tallestAddressForRow = -1;
 function drawAddresses(canvas, ctx, addresses) {
   ctx.fillStyle = 'black';
-  ctx.font = "40px IBMPlexMono";
+  ctx.font = "50px IBMPlexMono";
   let yCursor = Y_START_MARGIN;
   let xCursor = X_START_MARGIN;
   for (const address of addresses) {
@@ -107,12 +107,13 @@ function drawAddresses(canvas, ctx, addresses) {
 
     const longestLineWidth = Math.max(nameSize.width, streetSize.width, lastLineSize.width);
     const addressHeight = nameHeight + streetHeight + lastLineHeight + LINE_SPACING * 2;
+    tallestAddressForRow = Math.max(tallestAddressForRow, addressHeight);
 
-    if ((xCursor + longestLineWidth) > X_LIMIT) {
+    if ((xCursor + longestLineWidth + PADDING * 2) > X_LIMIT) {
       xCursor = X_START_MARGIN;
-      yCursor += addressHeight + Y_SPACING;
+      yCursor += tallestAddressForRow + Y_SPACING + PADDING * 2;
+      tallestAddressForRow = -1;
       if ((yCursor + addressHeight) > Y_LIMIT) {
-        console.log(yCursor, addressHeight, Y_LIMIT)
         break;
       }
     }
@@ -125,7 +126,7 @@ function drawAddresses(canvas, ctx, addresses) {
     // ctx.fillRect(xCursor, yCursor - nameSize.actualBoundingBoxAscent, longestLineWidth, addressHeight);
 
     const rectStartX = xCursor - PADDING;
-    const rectStartY = yCursor - nameSize.actualBoundingBoxAscent - PADDING;
+    const rectStartY = yCursor - nameSize.fontBoundingBoxAscent - PADDING;
     ctx.fillRect(rectStartX, rectStartY, longestLineWidth + PADDING * 2, addressHeight + PADDING * 2);
 
 
@@ -141,7 +142,7 @@ function drawAddresses(canvas, ctx, addresses) {
     ctx.fillText(lastLine, xCursor, innerYCursor);
     innerYCursor += lastLineHeight;
 
-    xCursor += longestLineWidth + X_SPACING;
+    xCursor += longestLineWidth + X_SPACING + PADDING * 2;
   }
 }
 
@@ -150,5 +151,5 @@ function inchToPixels(inch) {
 }
 
 function getHeightFromTextMetrics(textMetrics) {
-  return textMetrics.actualBoundingBoxDescent + textMetrics.actualBoundingBoxAscent;
+  return textMetrics.fontBoundingBoxDescent + textMetrics.fontBoundingBoxAscent;
 }
