@@ -115,6 +115,12 @@ function drawAddresses(canvas, ctx, addresses) {
         break;
       }
     }
+    
+    // Draw bounding box
+    ctx.fillStyle = 'pink';
+    ctx.fillRect(xCursor, yCursor - nameHeight, longestLineWidth, addressHeight);
+
+    ctx.fillStyle = 'black';
 
     let innerYCursor = yCursor;
     ctx.fillText(name, xCursor, innerYCursor);
