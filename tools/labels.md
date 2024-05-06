@@ -6,3 +6,5 @@ script: /js/labels.js
 ---
 
 <canvas id="page"></canvas>
+
+<div id="additional"></div>

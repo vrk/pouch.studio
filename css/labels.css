@@ -2,7 +2,7 @@ body {
   background-color: gainsboro;
 }
 
-#page {
+#page, canvas {
   width: 8.5in;
   height: 11in;
 }

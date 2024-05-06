@@ -19,6 +19,7 @@ function setDPI(canvas, dpi) {
   canvas.height = Math.ceil(height * scaleFactor);
 }
 
+const extraCanvasContainer = document.getElementById('additional');
 const canvas = document.getElementById('page');
 setDPI(canvas, DPI);
 const ctx = canvas.getContext('2d');
@@ -36,7 +37,7 @@ image.addEventListener("load", async (e) => {
 
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
   const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
-  drawAddresses(canvas, ctx, gumroadAddresses)
+  drawAddresses(ctx, gumroadAddresses)
 });
 image.src = "/images/silhouette-bg.png";
 
@@ -89,7 +90,9 @@ const X_SPACING = inchToPixels(0.1);
 const Y_SPACING = inchToPixels(0.1);
 const LINE_SPACING = inchToPixels(0.05);
 let tallestAddressForRow = -1;
-function drawAddresses(canvas, ctx, addresses) {
+
+function drawAddresses(startingCtx, addresses) {
+  let ctx = startingCtx;
   ctx.fillStyle = 'black';
   ctx.font = "50px IBMPlexMono";
   let yCursor = Y_START_MARGIN;
@@ -114,12 +117,17 @@ function drawAddresses(canvas, ctx, addresses) {
       yCursor += tallestAddressForRow + Y_SPACING + PADDING * 2;
       tallestAddressForRow = -1;
       if ((yCursor + addressHeight) > Y_LIMIT) {
-        break;
+        // Create new page
+        const canvas = document.createElement('canvas');
+        extraCanvasContainer.append(canvas);
+        setDPI(canvas, DPI);
+        ctx = canvas.getContext('2d');
+        yCursor = Y_START_MARGIN;
+        xCursor = X_START_MARGIN;
       }
     }
     
     // Draw bounding box
-    ctx.fillStyle = 'pink';
 
     // Draws a plain rectangle
 
@@ -127,9 +135,10 @@ function drawAddresses(canvas, ctx, addresses) {
 
     const rectStartX = xCursor - PADDING;
     const rectStartY = yCursor - nameSize.fontBoundingBoxAscent - PADDING;
+    ctx.fillStyle = 'pink';
     ctx.fillRect(rectStartX, rectStartY, longestLineWidth + PADDING * 2, addressHeight + PADDING * 2);
 
-
+    ctx.font = "50px IBMPlexMono";
     ctx.fillStyle = 'black';
 
     let innerYCursor = yCursor;
@@ -152,4 +161,11 @@ function inchToPixels(inch) {
 
 function getHeightFromTextMetrics(textMetrics) {
   return textMetrics.fontBoundingBoxDescent + textMetrics.fontBoundingBoxAscent;
+}
+
+function downloadCanvas(canvas){
+  var link = document.createElement('a');
+  link.download = 'filename.png';
+  link.href = canvas.toDataURL()
+  link.click();
 }
