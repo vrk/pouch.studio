@@ -88,6 +88,7 @@ const Y_LIMIT = inchToPixels(9.5);
 const X_SPACING = inchToPixels(0.25);
 const Y_SPACING = inchToPixels(0.5);
 const LINE_SPACING = inchToPixels(0.1);
+const PADDING = inchToPixels(0.1);
 function drawAddresses(canvas, ctx, addresses) {
   ctx.fillStyle = 'black';
   ctx.font = "40px IBMPlexMono";
@@ -118,7 +119,15 @@ function drawAddresses(canvas, ctx, addresses) {
     
     // Draw bounding box
     ctx.fillStyle = 'pink';
-    ctx.fillRect(xCursor, yCursor - nameHeight, longestLineWidth, addressHeight);
+
+    // Draws a plain rectangle
+
+    // ctx.fillRect(xCursor, yCursor - nameSize.actualBoundingBoxAscent, longestLineWidth, addressHeight);
+
+    const rectStartX = xCursor - PADDING;
+    const rectStartY = yCursor - nameSize.actualBoundingBoxAscent - PADDING;
+    ctx.fillRect(rectStartX, rectStartY, longestLineWidth + PADDING * 2, addressHeight + PADDING * 2);
+
 
     ctx.fillStyle = 'black';
 
