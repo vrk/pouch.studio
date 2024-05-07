@@ -35,9 +35,16 @@ image.addEventListener("load", async (e) => {
   // add font to document
   document.fonts.add(font);
 
-  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  // ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
   const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
-  drawAddresses(ctx, gumroadAddresses)
+  drawAddresses(ctx, gumroadAddresses);
+
+  const newCanvas = document.createElement('canvas');
+  extraCanvasContainer.append(newCanvas);
+  setDPI(newCanvas, DPI);
+  const newCtx = newCanvas.getContext('2d');
+  const payhipAddresses = await processPayhipFile("/tools/payhip-customers.csv");
+  drawAddresses(newCtx, payhipAddresses);
 });
 image.src = "/images/silhouette-bg.png";
 
@@ -57,10 +64,52 @@ async function processGumroadFile(url) {
 
   for (let i = 0; i < lines.length; i++) {
       if (lines[i].trim()) {  // Check if the line is not just whitespace
-          const columns = lines[i].split(',');
+          let columns = lines[i].split(',');
           // const country = columns[columns.length - 1];
           const state = columns[columns.length - 2];
           const zip = columns[columns.length - 3];
+          const city = columns[columns.length - 4];
+          const name = columns[0];
+
+          // Ugly way to build up the address with unknown # of commas
+          const addressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
+          let address = "";
+          for (let i = 0; i < addressTokens; i++) {
+            address += columns[1 + i];
+          }
+
+          americanAddresses.push({
+            name,
+            street: address,
+            lastLine: `${city}, ${state} ${zip}`
+          })
+      }
+  }
+  return americanAddresses;
+}
+
+async function processPayhipFile(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  // Convert it to text
+  const data = await response.text();
+
+  // Split the text into lines
+  const lines = data.split('\n');
+
+  const americanAddresses = [];
+
+  for (let i = 0; i < lines.length; i++) {
+      if (lines[i].trim()) {  // Check if the line is not just whitespace
+          let columns = lines[i].split(',');
+          columns = columns.map(v => v.trim());
+          console.log(columns);
+          // const country = columns[columns.length - 1];
+          const zip = columns[columns.length - 2];
+          const state = columns[columns.length - 3];
           const city = columns[columns.length - 4];
           const name = columns[0];
 
@@ -135,7 +184,7 @@ function drawAddresses(startingCtx, addresses) {
 
     const rectStartX = xCursor - PADDING;
     const rectStartY = yCursor - nameSize.fontBoundingBoxAscent - PADDING;
-    ctx.fillStyle = 'pink';
+    ctx.fillStyle = 'white';
     ctx.fillRect(rectStartX, rectStartY, longestLineWidth + PADDING * 2, addressHeight + PADDING * 2);
 
     ctx.font = "50px IBMPlexMono";
