@@ -4,6 +4,8 @@ const CSS_PIXELS_PER_INCH = 96;
 const DPI = 300;
 const PIXELS_PER_INCH = DPI;
 
+const FONT_STYLE = "50px IBMPlexMono";
+
 function setDPI(canvas, dpi) {
   // Set up CSS size.
   canvas.style.width = `${CANVAS_WIDTH_INCHES}in`;
@@ -35,7 +37,7 @@ image.addEventListener("load", async (e) => {
   // add font to document
   document.fonts.add(font);
 
-  // ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
   const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
   drawAddresses(ctx, gumroadAddresses);
 
@@ -44,6 +46,7 @@ image.addEventListener("load", async (e) => {
   setDPI(newCanvas, DPI);
   const newCtx = newCanvas.getContext('2d');
   const payhipAddresses = await processPayhipFile("/tools/payhip-customers.csv");
+  // const payhipAddresses = await processPayhipFile("/tools/hack.csv");
   drawAddresses(newCtx, payhipAddresses);
 });
 image.src = "/images/silhouette-bg.png";
@@ -72,15 +75,16 @@ async function processGumroadFile(url) {
           const name = columns[0];
 
           // Ugly way to build up the address with unknown # of commas
-          const addressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
-          let address = "";
-          for (let i = 0; i < addressTokens; i++) {
-            address += columns[1 + i];
+          const numAddressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
+          const addressTokenList = [];
+          for (let i = 0; i < numAddressTokens; i++) {
+            addressTokenList.push(columns[1 + i]); // 1 + i because we're skipping the name field at index 0
           }
+          const address = addressTokenList.join(" ");
 
           americanAddresses.push({
             name,
-            street: address,
+            street: address.trim(),
             lastLine: `${city}, ${state} ${zip}`
           })
       }
@@ -114,11 +118,12 @@ async function processPayhipFile(url) {
           const name = columns[0];
 
           // Ugly way to build up the address with unknown # of commas
-          const addressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
-          let address = "";
-          for (let i = 0; i < addressTokens; i++) {
-            address += columns[1 + i];
+          const numAddressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
+          const addressTokenList = [];
+          for (let i = 0; i < numAddressTokens; i++) {
+            addressTokenList.push(columns[1 + i]); // 1 + i because we're skipping the name field at index 0
           }
+          const address = addressTokenList.join(" ");
 
           americanAddresses.push({
             name,
@@ -143,7 +148,7 @@ let tallestAddressForRow = -1;
 function drawAddresses(startingCtx, addresses) {
   let ctx = startingCtx;
   ctx.fillStyle = 'black';
-  ctx.font = "50px IBMPlexMono";
+  ctx.font = FONT_STYLE;
   let yCursor = Y_START_MARGIN;
   let xCursor = X_START_MARGIN;
   for (const address of addresses) {
@@ -187,7 +192,7 @@ function drawAddresses(startingCtx, addresses) {
     ctx.fillStyle = 'white';
     ctx.fillRect(rectStartX, rectStartY, longestLineWidth + PADDING * 2, addressHeight + PADDING * 2);
 
-    ctx.font = "50px IBMPlexMono";
+    ctx.font = FONT_STYLE;
     ctx.fillStyle = 'black';
 
     let innerYCursor = yCursor;
