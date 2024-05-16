@@ -24,7 +24,7 @@ function setDPI(canvas, dpi) {
 const extraCanvasContainer = document.getElementById('additional');
 const canvas = document.getElementById('page');
 setDPI(canvas, DPI);
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d', { colorSpace: "srgb" });
 
 const image = new Image();
 image.addEventListener("load", async (e) => {
@@ -38,16 +38,15 @@ image.addEventListener("load", async (e) => {
   document.fonts.add(font);
 
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-  const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
-  drawAddresses(ctx, gumroadAddresses);
+  // const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
+  // drawAddresses(ctx, gumroadAddresses);
 
-  const newCanvas = document.createElement('canvas');
-  extraCanvasContainer.append(newCanvas);
-  setDPI(newCanvas, DPI);
-  const newCtx = newCanvas.getContext('2d');
-  const payhipAddresses = await processPayhipFile("/tools/payhip-customers.csv");
-  // const payhipAddresses = await processPayhipFile("/tools/hack.csv");
-  drawAddresses(newCtx, payhipAddresses);
+  // const newCanvas = document.createElement('canvas');
+  // extraCanvasContainer.append(newCanvas);
+  // setDPI(newCanvas, DPI);
+  // const newCtx = newCanvas.getContext('2d');
+  // const payhipAddresses = await processPayhipFile("/tools/payhip-customers-usps.tsv");
+  // drawAddresses(newCtx, payhipAddresses);
 });
 image.src = "/images/silhouette-bg.png";
 
@@ -108,22 +107,22 @@ async function processPayhipFile(url) {
 
   for (let i = 0; i < lines.length; i++) {
       if (lines[i].trim()) {  // Check if the line is not just whitespace
-          let columns = lines[i].split(',');
+          let columns = lines[i].split('\t');
           columns = columns.map(v => v.trim());
           console.log(columns);
+          // First Name	Last Name	Address Line 1	Address Line 2	City	State Name	ZIP / Postcode	Country Name
           // const country = columns[columns.length - 1];
-          const zip = columns[columns.length - 2];
-          const state = columns[columns.length - 3];
-          const city = columns[columns.length - 4];
-          const name = columns[0];
-
-          // Ugly way to build up the address with unknown # of commas
-          const numAddressTokens = columns.length - 5; // there are 5 known tokens, the rest are address tokens
-          const addressTokenList = [];
-          for (let i = 0; i < numAddressTokens; i++) {
-            addressTokenList.push(columns[1 + i]); // 1 + i because we're skipping the name field at index 0
-          }
-          const address = addressTokenList.join(" ");
+          const firstName = columns[0];
+          const lastName = columns[1];
+          const addressLine1 = columns[2];
+          const addressLine2 = columns[3];
+          const city = columns[4];
+          const state = columns[5];
+          const zip = columns[6];
+          const country = columns[7];
+          
+          const name = `${firstName} ${lastName}`;
+          const address = `${addressLine1} ${addressLine2}`;
 
           americanAddresses.push({
             name,
