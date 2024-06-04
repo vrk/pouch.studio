@@ -41,12 +41,12 @@ image.addEventListener("load", async (e) => {
   // const gumroadAddresses = await processGumroadFile("/tools/gumroad-customers.csv");
   // drawAddresses(ctx, gumroadAddresses);
 
-  // const newCanvas = document.createElement('canvas');
-  // extraCanvasContainer.append(newCanvas);
-  // setDPI(newCanvas, DPI);
-  // const newCtx = newCanvas.getContext('2d');
-  // const payhipAddresses = await processPayhipFile("/tools/payhip-customers-usps.tsv");
-  // drawAddresses(newCtx, payhipAddresses);
+  const newCanvas = document.createElement('canvas');
+  extraCanvasContainer.append(newCanvas);
+  setDPI(newCanvas, DPI);
+  const newCtx = newCanvas.getContext('2d');
+  const payhipAddresses = await processPayhipFile("/tools/payhip-customers-jun3.tsv");
+  drawAddresses(newCtx, payhipAddresses);
 });
 image.src = "/images/silhouette-bg.png";
 
