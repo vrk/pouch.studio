@@ -12,7 +12,7 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
-  <a href="https://shop.pouchmagazine.com/b/DFxGZ" target="_blank">BUY Pouch Issue #1</a>
+  <a href="https://shop.pouchmagazine.com/" target="_blank">BUY Pouch Issue #1</a>
   <a href="https://vrklovespaper.substack.com/p/slowly-but-shipping" target="_blank">Read latest newsletter: slowly but shipping</a>
   <a href="https://shop.pouchmagazine.com/" target="_blank">Shop all zines</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: A new indie magazine for stationery lovers</a>
