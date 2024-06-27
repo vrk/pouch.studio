@@ -14,7 +14,7 @@ stylesheet: /css/links.css
 <div class="list">
   <a href="https://shop.pouchmagazine.com/" target="_blank">BUY Pouch Issue #1</a>
   <a href="https://yosekastationery.com/collections/stationery-fest-2024-workshops/products/stationery-fest-workshop-how-to-print-photos-and-stickers-with-victoria-kirst-august-8-1pm" target="_blank">Workshop: How to Print Photos and Stickers</a>
-  <a href="https://vrklovespaper.substack.com/p/slowly-but-shipping" target="_blank">Read latest newsletter: slowly but shipping</a>
+  <a href="https://vrklovespaper.substack.com/p/1-year-of-solo-work" target="_blank">Read latest newsletter: 1 year of solo work!</a>
   <a href="https://shop.pouchmagazine.com/" target="_blank">Shop all zines</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: A new indie magazine for stationery lovers</a>
   <a href="https://pouch.studio/" target="_blank">Pouch Studio: Zines, machines, & software that loves paper</a>

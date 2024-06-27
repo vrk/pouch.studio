@@ -45,7 +45,7 @@ image.addEventListener("load", async (e) => {
   extraCanvasContainer.append(newCanvas);
   setDPI(newCanvas, DPI);
   const newCtx = newCanvas.getContext('2d');
-  const payhipAddresses = await processPayhipFile("/tools/payhip-customers-jun6.tsv");
+  const payhipAddresses = await processPayhipFile("/tools/june20.tsv");
   drawAddresses(newCtx, payhipAddresses);
 });
 image.src = "/images/silhouette-bg.png";
