@@ -15,7 +15,6 @@ stylesheet: /css/links.css
   <a href="https://shop.pouchmagazine.com/b/DFxGZ" target="_blank">BUY Pouch Issue #1</a>
   <a href="https://shop.pouchmagazine.com/b/preorder-pouch-2-and-3" target="_blank">PREORDER Pouch Issue #2 &amp; #3</a>
   <a href="https://pouchmagazine.com/survey" target="_blank">How do YOU stationery? Take the survey!</a>
-  <a href="https://vrklovespaper.substack.com/p/1-year-of-solo-work" target="_blank">Read latest newsletter: 1 year of solo work!</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: A new indie magazine for stationery lovers</a>
   <a href="https://pouch.studio/" target="_blank">Pouch Studio: Zines, machines, & software that loves paper</a>
 </div>
