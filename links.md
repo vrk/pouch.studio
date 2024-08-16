@@ -9,6 +9,7 @@ stylesheet: /css/links.css
 <header>
   <img src="/images/logo-for-screen.png" id="link-logo">
   <h2>Pouch Studio</h2>
+
 </header>
 
 <div class="list">
@@ -25,6 +26,9 @@ stylesheet: /css/links.css
   </a>
   <a href="https://vrklovespaper.substack.com/" target="_blank">
     <img src="/images/substack.png" class="newsletter" />
+  </a>
+  <a href="mailto:victoriakirst@gmail.com" target="_blank">
+    <img src="/images/email.png" class="email" />
   </a>
 </div>
 
