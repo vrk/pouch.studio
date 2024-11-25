@@ -14,9 +14,7 @@ stylesheet: /css/links.css
 
 <div class="list">
   <a href="https://shop.pouchmagazine.com/b/preorder-pouch-2-and-3" target="_blank">PREORDER Pouch Issue #2 &amp; #3</a>
-  <a href="https://pouchmagazine.com/submit-journal-layout/" target="_blank">CONTRIBUTE: Submit a journal layout to Pouch #2</a>
-  <a href="https://pouchmagazine.com/send-hot-take/" target="_blank">CONTRIBUTE: Publish your stationery hot take in Pouch #2</a>
-  <a href="https://pouchmagazine.com/classifieds/" target="_blank">CONTRIBUTE: Buy a community ad in Pouch #2</a>
+  <a href="https://vrklovespaper.substack.com/p/museum-vs-candy-store" target="_blank">Read latest newsletter: Museum vs Candy Store</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: A new indie magazine for stationery lovers</a>
   <a href="https://pouch.studio/" target="_blank">Pouch Studio: Zines, machines, & software that loves paper</a>
 </div>
