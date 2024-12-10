@@ -13,6 +13,7 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
+  <a href="https://www.journalhelper.com/" target="_blank">TRY Hobonichi Print Preview: A monthly photo tool</a>
   <a href="https://shop.pouchmagazine.com/b/preorder-pouch-2-and-3" target="_blank">PREORDER Pouch Issue #2 &amp; #3</a>
   <a href="https://vrklovespaper.substack.com/p/museum-vs-candy-store" target="_blank">Read latest newsletter: Museum vs Candy Store</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: A new indie magazine for stationery lovers</a>
