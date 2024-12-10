@@ -7,6 +7,4 @@ title: tools - pouch studio
 
 I'm building tools that help people create and connect with paper!
 
-- [Mini Printer Pal](https://vrklovespaper.itch.io/miniprinterpal)
-
-_(more to come later in 2024!)_
+- [Journal Helper](https://www.journalhelper.com/): Digital tools for your physical jouranl
