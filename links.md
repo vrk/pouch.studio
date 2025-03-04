@@ -13,10 +13,9 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
-  <a href="https://www.journalhelper.com/" target="_blank">Journal Helper: Digital tools for physical journals</a>
+  <a href="https://open.substack.com/pub/vrklovespaper/p/how-to-draw-a-cover-an-essay-against" target="_blank">READ latest newsletter: How to draw a cover</a>
   <a href="https://www.journalhelper.com/hobonichi" target="_blank">TRY Hobonichi Print Preview: A tool for monthly photo a day</a>
   <a href="https://shop.pouchmagazine.com/b/preorder-pouch-2-and-3" target="_blank">PREORDER Pouch Issue #2 &amp; #3</a>
-  <a href="https://vrklovespaper.substack.com/p/software-for-stationery-lovers" target="_blank">Read latest newsletter: Software for stationery lovers</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: A new indie magazine for stationery lovers</a>
   <a href="https://pouch.studio/" target="_blank">Pouch Studio: Zines, machines, & software that loves paper</a>
 </div>
