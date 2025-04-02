@@ -13,8 +13,9 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
-  <a href="https://shop.pouchmagazine.com/b/pouch-issue-2" target="_blank">✨ NEW ✨ Buy Pouch Issue #2</a>
-  <a href="https://shop.pouchmagazine.com/collection/stickers" target="_blank">✨ NEW ✨  Shop the Pouch sticker collection</a>
+  <a href="https://partiful.com/e/CTvh9gWGtQBKiLoPp8eZ" target="_blank">RSVP: Pouch #2 Launch Party</a>
+  <a href="https://shop.pouchmagazine.com/b/pouch-issue-2" target="_blank">Buy Pouch Issue #2</a>
+  <a href="https://shop.pouchmagazine.com/collection/stickers" target="_blank">Shop the Pouch sticker collection</a>
   <a href="https://open.substack.com/pub/vrklovespaper/p/how-to-draw-a-cover-an-essay-against" target="_blank">Latest newsletter: An essay against AI art</a>
   <a href="https://www.journalhelper.com/hobonichi" target="_blank">Hobonichi Print Preview: A tool for monthly photo a day</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: The magazine for stationery lovers</a>
