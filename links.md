@@ -12,9 +12,10 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
-  <a href="https://www.youtube.com/watch?v=tehR35cyFHU" target="_blank">✨NEW✨ Pouch Q&A video: Answering what you asked (and didn't ask) about Pouch Magazine</a>
-  <a href="https://vrklovespaper.substack.com/p/pouch-issue-2-ft-the-musical-stylings" target="_blank">Latest newsletter: Pouch Issue 2, ft the musical stylings of Popeye and Cat-sensei</a>
+  <a href="https://shop.pouchmagazine.com/" target="_blank">Shop Pouch Store</a>
   <a href="https://shop.pouchmagazine.com/b/pouch-issue-2" target="_blank">Buy Pouch Issue #2</a>
+  <a href="https://www.youtube.com/watch?v=tehR35cyFHU" target="_blank">Pouch Q&A video: Answering what you asked (and didn't ask) about Pouch Magazine</a>
+  <a href="https://vrklovespaper.substack.com/p/pouch-issue-2-ft-the-musical-stylings" target="_blank">Latest newsletter: Pouch Issue 2, ft the musical stylings of Popeye and Cat-sensei</a>
   <a href="https://www.journalhelper.com/hobonichi" target="_blank">Hobonichi Print Preview: A tool for monthly photo a day</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: The magazine for stationery lovers</a>
   <a href="https://pouch.studio/" target="_blank">Pouch Studio: Zines, machines, & software that loves paper</a>
