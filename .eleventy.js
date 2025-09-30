@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats("njk, md");
+  eleventyConfig.addPassthroughCopy("92905-bww-talk");
   eleventyConfig.addPassthroughCopy("images/");
   eleventyConfig.addPassthroughCopy("scripts/");
   eleventyConfig.addPassthroughCopy("css/");
