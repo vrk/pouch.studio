@@ -12,9 +12,9 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
+  <a href="https://vrklovespaper.substack.com/p/making-a-workshop-thats-also-a-zine" target="_blank">✨ NEW✨ Latest newsletter: Making a workshop that's also a zine that's also a techo kaigi</a>
   <a href="https://www.journalhelper.com" target="_blank">Journal Helper: Digital tools for your analog journal</a>
   <a href="https://www.youtube.com/watch?v=8nf0P2J1YOY" target="_blank">YouTube: How I print photos for my journal using Journal Helper</a>
-  <a href="https://vrklovespaper.substack.com/p/permission-to-be-wrong-and-slow" target="_blank">Latest newsletter: Permission to be wrong and slow</a>
   <a href="https://shop.pouchmagazine.com/" target="_blank">Shop Pouch Store</a>
   <a href="https://shop.pouchmagazine.com/b/pouch-issue-2" target="_blank">Buy Pouch Issue #2</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: The magazine for stationery lovers</a>
