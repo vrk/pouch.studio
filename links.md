@@ -12,10 +12,10 @@ stylesheet: /css/links.css
 </header>
 
 <div class="list">
-  <a href="https://vrklovespaper.substack.com/p/pouch-issue-3-is-coming-spring-2026" target="_blank">✨ NEW✨ Latest newsletter: Pouch Issue 3 is coming Spring 2026</a>
+  <a href="https://pouchmagazine.com/pouch-03/submit/" target="_blank">Call for Submissions to Pouch Issue #3</a>
   <a href="https://shop.pouchmagazine.com/b/preorder-issue-3" target="_blank">Preorder Pouch Issue 3</a>
+  <a href="https://vrklovespaper.substack.com/p/pouch-issue-3-is-coming-spring-2026" target="_blank">Latest newsletter: Pouch Issue 3 is coming Spring 2026</a>
   <a href="https://www.journalhelper.com" target="_blank">Journal Helper: Digital tools for your analog journal</a>
-  <a href="https://www.youtube.com/watch?v=8nf0P2J1YOY" target="_blank">YouTube: How I print photos for my journal using Journal Helper</a>
   <a href="https://shop.pouchmagazine.com/" target="_blank">Shop Pouch Store</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: The magazine for stationery lovers</a>
   <a href="https://pouch.studio/" target="_blank">Pouch Studio: Zines, machines, & software that loves paper</a>
