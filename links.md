@@ -14,7 +14,7 @@ stylesheet: /css/links.css
 <div class="list">
   <a href="https://pouchmagazine.com/pouch-03/submit/" target="_blank">Call for Submissions to Pouch Issue #3</a>
   <a href="https://shop.pouchmagazine.com/b/preorder-issue-3" target="_blank">Preorder Pouch Issue 3</a>
-  <a href="https://vrklovespaper.substack.com/p/pouch-issue-3-is-coming-spring-2026" target="_blank">Latest newsletter: Pouch Issue 3 is coming Spring 2026</a>
+  <a href="https://vrklovespaper.substack.com/p/my-journals-and-planners-for-2026" target="_blank">Latest newsletter: My Journals & Planners for 2026</a>
   <a href="https://www.journalhelper.com" target="_blank">Journal Helper: Digital tools for your analog journal</a>
   <a href="https://shop.pouchmagazine.com/" target="_blank">Shop Pouch Store</a>
   <a href="http://pouchmagazine.com/" target="_blank">Pouch: The magazine for stationery lovers</a>
